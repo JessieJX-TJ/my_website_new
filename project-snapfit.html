@@ -1,0 +1,961 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./auth-gate.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Apprentice · Xi(Jessie) Ji</title>
+    <meta
+      name="description"
+      content="Case study: The Apprentice — an AI agent for automotive mold cost estimation and evaluation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-nav">
+        <div class="site-nav__inner">
+          <a class="site-nav__brand" href="./index.html">
+            <span class="brand-stud" aria-hidden="true"></span>
+            Xi(Jessie) Ji
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="site-nav__links" aria-label="Primary">
+            <a href="./index.html">About Me</a>
+            <a class="is-active" href="./projects.html">Projects</a>
+            <a href="./resume.html">Resume</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="case-page">
+        <nav class="case-side-nav" aria-label="Case study sections">
+          <p class="case-side-nav__label">Contents</p>
+          <ol class="case-side-nav__list">
+            <li><a href="#overview" data-section="overview"><span>01</span>Overview</a></li>
+            <li><a href="#problem" data-section="problem"><span>02</span>Problem Space</a></li>
+            <li>
+              <a href="#response" data-section="response"><span>03</span>Design Response</a>
+              <ul class="case-side-nav__sub">
+                <li><a href="#response-character">Learner</a></li>
+                <li><a href="#response-illustration">Illustration</a></li>
+                <li><a href="#response-system">Presence</a></li>
+                <li><a href="#response-lightweight">Teaching</a></li>
+              </ul>
+            </li>
+            <li><a href="#reflection" data-section="reflection"><span>04</span>Reflection</a></li>
+          </ol>
+        </nav>
+
+        <div class="case-content">
+        <header class="case-hero">
+          <div class="container case-hero__inner reveal">
+            <div class="case-hero__copy">
+            <p class="section-label"><span class="eyebrow-dot"></span>Case Study · SAIC IM Motors</p>
+            <h1 class="section-title">The Apprentice</h1>
+            <p class="section-lead">
+              The Apprentice is an AI agent for mold cost estimation that learns professional
+              expertise through continuous interaction with engineers. I designed its character and
+              visual identity to embody a young, learning AI that can make mistakes, receive
+              feedback, and gradually develop its professional skills.
+            </p>
+            <div class="case-hero__meta">
+              <div>
+                <span class="case-meta__label">Role</span>
+                <span class="case-meta__value">UX &amp; UI Design</span>
+              </div>
+              <div>
+                <span class="case-meta__label">Timeline</span>
+                <span class="case-meta__value">2026 · 3 months</span>
+              </div>
+              <div>
+                <span class="case-meta__label">Team</span>
+                <span class="case-meta__value">Product · Engineering · Design</span>
+              </div>
+            </div>
+          
+            </div>
+            <div class="case-hero__visual">
+              <div class="case-robot-scene" aria-hidden="true">
+                        <svg class="welcome-robot-svg welcome-robot-scene" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 69" fill="none">
+                                <g>
+                                    <ellipse cx="43" cy="40" rx="27" ry="24" fill="url(#hero-robot-glow-a)"/>
+                                    <ellipse cx="27" cy="23" rx="27" ry="24" fill="url(#hero-robot-glow-b)"/>
+                                    <path d="M16.4626 8.46271L16.9075 9.77866L18.2235 10.2235L16.9262 10.6497L16.5 11.947L16.0551 10.631L14.7392 10.1862L16.0365 9.75997L16.4626 8.46271Z" fill="white"/>
+                                    <path d="M49.7234 44L50.1683 45.316L51.4842 45.7608L50.187 46.187L49.7608 47.4843L49.3159 46.1683L47.9999 45.7235L49.2972 45.2973L49.7234 44Z" fill="white"/>
+                                    <path d="M19.093 11.3696L19.4445 12.4094L20.4842 12.7609L19.4593 13.0976L19.1225 14.1225L18.7711 13.0828L17.7313 12.7313L18.7563 12.3946L19.093 11.3696Z" fill="white"/>
+                                    <path d="M52.3618 41L52.7133 42.0397L53.753 42.3912L52.7281 42.728L52.3913 43.7529L52.0398 42.7132L51.0001 42.3617L52.0251 42.025L52.3618 41Z" fill="white"/>
+                                    <circle cx="15.5" cy="15.5" r="0.5" fill="white"/>
+                                    <circle cx="52.5" cy="47.5" r="0.5" fill="white"/>
+                                    <circle cx="48.5" cy="16.5" r="0.5" fill="white"/>
+                                    <circle cx="50" cy="18" r="1" fill="white"/>
+                                </g>
+                                <defs>
+                                    <radialGradient id="hero-robot-glow-a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(43 40) rotate(90) scale(24 27)">
+                                        <stop stop-color="#7BABFF"/>
+                                        <stop offset="1" stop-color="#B4CFFF" stop-opacity="0"/>
+                                    </radialGradient>
+                                    <radialGradient id="hero-robot-glow-b" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(27 23) rotate(90) scale(24 27)">
+                                        <stop stop-color="#7BABFF"/>
+                                        <stop offset="1" stop-color="#B4CFFF" stop-opacity="0"/>
+                                    </radialGradient>
+                                </defs>
+                        </svg>
+                        <div class="case-robot">
+                        <svg class="welcome-robot-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 36" fill="none">
+                                <g>
+                                    <g class="welcome-robot-arm-wave-l">
+                                        <ellipse cx="6.30435" cy="21.2997" rx="3.56883" ry="6.95247" transform="rotate(6.74973 6.30435 21.2997)" fill="url(#welcome-robot-arm-l)"/>
+                                    </g>
+                                    <g class="welcome-robot-arm-wave-r">
+                                        <ellipse cx="3.56883" cy="6.95247" rx="3.56883" ry="6.95247" transform="matrix(-0.986774 0.162103 0.162103 0.986774 36.7556 13.8606)" fill="url(#welcome-robot-arm-r)"/>
+                                    </g>
+                                    <path d="M33.8652 13.9902C34.6477 13.8871 35.3143 14.0349 35.7441 14.5595C36.1634 15.0714 36.312 15.8907 36.1992 17.0195C35.2277 26.7349 27.7245 32.6906 16.4922 35.8134C16.2185 35.8895 16.0013 35.7278 15.9004 35.54C15.8014 35.3554 15.783 35.0976 15.9238 34.8896C16.1433 34.5654 16.2998 34.1344 16.2998 33.4999C16.2998 32.8346 15.8266 32.113 15.1963 31.4843C14.5733 30.863 13.8426 30.3771 13.417 30.1816L13.1631 30.0654L13.3545 29.8622C17.0259 25.9879 22.8842 20.5023 27.7188 17.0966C28.9278 16.2449 30.0764 15.521 31.1133 14.9843C32.1474 14.449 33.0841 14.0931 33.8652 13.9902Z" fill="url(#welcome-robot-body)" stroke="url(#welcome-robot-body-stroke)" stroke-width="0.4"/>
+                                    <circle cx="20" cy="16" r="16" fill="url(#welcome-robot-head)"/>
+                                    <g filter="url(#welcome-robot-face-shadow)">
+                                        <ellipse cx="19.5556" cy="13" rx="11.5556" ry="8" fill="url(#welcome-robot-face)"/>
+                                        <path d="M19.5557 5.44434C22.6676 5.44436 25.4657 6.31889 27.4736 7.70898C29.4832 9.10028 30.667 10.978 30.667 13C30.667 15.022 29.4832 16.8997 27.4736 18.291C25.4657 19.6811 22.6676 20.5556 19.5557 20.5557C16.4436 20.5557 13.6456 19.6811 11.6377 18.291C9.62807 16.8997 8.44434 15.022 8.44434 13C8.44434 10.978 9.62807 9.10029 11.6377 7.70898C13.6456 6.31888 16.4436 5.44434 19.5557 5.44434Z" stroke="url(#welcome-robot-face-ring)" stroke-width="0.888889"/>
+                                    </g>
+                                    <g class="welcome-robot-eye">
+                                        <rect x="13.78" y="9.89" width="4.44" height="6.22" rx="2.22" fill="#1D4ED8" opacity="0.4"/>
+                                        <rect x="14.2222" y="10.3333" width="3.55556" height="5.33333" rx="1.77778" fill="#6EE5FF"/>
+                                        <rect x="14.3111" y="10.4222" width="3.37778" height="5.15556" rx="1.68889" stroke="url(#welcome-robot-eye-shine-l)" stroke-width="0.177778"/>
+                                    </g>
+                                    <g class="welcome-robot-eye">
+                                        <rect x="20.89" y="9.89" width="4.44" height="6.22" rx="2.22" fill="#1D4ED8" opacity="0.4"/>
+                                        <rect x="21.3333" y="10.3333" width="3.55556" height="5.33333" rx="1.77778" fill="#6EE5FF"/>
+                                        <rect x="21.4221" y="10.4222" width="3.37778" height="5.15556" rx="1.68889" stroke="url(#welcome-robot-eye-shine-r)" stroke-width="0.177778"/>
+                                    </g>
+                                </g>
+                                <defs>
+                                    <filter id="welcome-robot-face-shadow" x="7.8" y="5" width="23.9111" height="17.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dx="0.2" dy="1"/>
+                                        <feGaussianBlur stdDeviation="0.2"/>
+                                        <feComposite in2="hardAlpha" operator="out"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                    </filter>
+                                    <radialGradient id="welcome-robot-arm-l" cx="0" cy="0" r="1" gradientTransform="matrix(3.12273 8.03879 -4.12646 6.08341 4.85451 18.258)" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="1" stop-color="#C3CBFF"/>
+                                    </radialGradient>
+                                    <radialGradient id="welcome-robot-arm-r" cx="0" cy="0" r="1" gradientTransform="matrix(5.05639 5.53921 -1.43673 6.22927 0.126945 3.97013)" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="1" stop-color="#C3CBFF"/>
+                                    </radialGradient>
+                                    <linearGradient id="welcome-robot-body" x1="19" y1="32" x2="19.5" y2="34.5" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CFD6FF"/>
+                                        <stop offset="1" stop-color="#B5BEFB"/>
+                                    </linearGradient>
+                                    <linearGradient id="welcome-robot-body-stroke" x1="18" y1="34.5" x2="16.5" y2="33.5" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CFD6FF" stop-opacity="0"/>
+                                        <stop offset="1" stop-color="#E2E6FF"/>
+                                    </linearGradient>
+                                    <radialGradient id="welcome-robot-head" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.5 9) rotate(52.8831) scale(23.2002)">
+                                        <stop stop-color="white"/>
+                                        <stop offset="0.841346" stop-color="#C3CBFF"/>
+                                        <stop offset="1" stop-color="#CCD3FF"/>
+                                    </radialGradient>
+                                    <linearGradient id="welcome-robot-face" x1="19.5556" y1="5" x2="19.5556" y2="21" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#484FAB"/>
+                                        <stop offset="1" stop-color="#37375E"/>
+                                    </linearGradient>
+                                    <linearGradient id="welcome-robot-face-ring" x1="19.5556" y1="5" x2="19.5556" y2="21" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#7BEEE5"/>
+                                        <stop offset="0.403846" stop-color="#7C71FB"/>
+                                        <stop offset="1" stop-color="#B083EC"/>
+                                    </linearGradient>
+                                    <linearGradient id="welcome-robot-eye-shine-l" x1="15.9999" y1="10.3333" x2="15.9999" y2="15.6667" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="0.884615" stop-color="white" stop-opacity="0"/>
+                                    </linearGradient>
+                                    <linearGradient id="welcome-robot-eye-shine-r" x1="23.111" y1="10.3333" x2="23.111" y2="15.6667" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="0.884615" stop-color="white" stop-opacity="0"/>
+                                    </linearGradient>
+                                    <clipPath id="welcome-robot-clip">
+                                        <rect width="40" height="36" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                        </svg>
+                        </div>
+              </div>
+            </div>
+          </div>
+            <div class="container case-hero__demo reveal">
+              <div class="case-embed">
+                <div class="case-embed__frame case-embed__frame--apprentice-login">
+                  <div class="apprentice-login-preview" aria-hidden="true">
+                    <div class="apprentice-login-preview__illu">
+                      <img src="./assets/apprentice/illustration-check-in.svg" alt="" />
+                    </div>
+                    <div class="apprentice-login-preview__panel">
+                      <h2>Mold Cost Evaluation Agent</h2>
+                      <p class="apprentice-login-preview__subtitle">
+                        Professional workbench for mold design, pricing, and knowledge base Q&amp;A
+                      </p>
+                      <div class="apprentice-login-preview__card">
+                        <div class="apprentice-login-preview__tabs">
+                          <span class="is-active">Login</span>
+                          <span>Register</span>
+                        </div>
+                        <div class="apprentice-login-preview__field">
+                          <div class="apprentice-login-preview__label">
+                            <span>Username</span>
+                            <i>?</i>
+                          </div>
+                          <div class="apprentice-login-preview__input">Enter your username</div>
+                        </div>
+                        <div class="apprentice-login-preview__field">
+                          <div class="apprentice-login-preview__label">
+                            <span>Password</span>
+                            <i>?</i>
+                          </div>
+                          <div class="apprentice-login-preview__input apprentice-login-preview__input--password">
+                            Enter your password
+                            <em>Show</em>
+                          </div>
+                        </div>
+                        <label class="apprentice-login-preview__remember">
+                          <span></span>
+                          Remember username
+                        </label>
+                        <div class="apprentice-login-preview__submit">Login</div>
+                      </div>
+                      <p class="apprentice-login-preview__foot">
+                        Don’t have an account? <em>Sign up</em>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="case-embed__overlay">
+                    <a
+                      class="btn btn--primary"
+                      href="https://jessiejx-tj.github.io/apprentice_demo/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-demo-open
+                      >Open demo</a
+                    >
+                    <p class="case-embed__hint">
+                      Enter any username and password to log in and explore.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </header>
+
+        <section class="case-section" id="overview">
+          <div class="container">
+            <div class="case-section__header reveal">
+              <p class="section-label"><span class="eyebrow-dot"></span>01</p>
+              <h2 class="section-title">Overview</h2>
+            </div>
+            <div class="case-overview case-overview--lead reveal">
+              <div class="case-overview__item">
+                <div class="case-overview__illust" aria-hidden="true">
+                  <svg viewBox="0 0 320 168" fill="none">
+                    <path d="M26 94c3-18 11-28 26-28s23 10 26 28" fill="#eef3fb" stroke="#5b6f8a" stroke-width="1.6" stroke-linecap="round"/>
+                    <circle cx="52" cy="48" r="14" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                    <path d="M108 32h62a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8H128l-22 14 14-14H108a8 8 0 0 1-8-8V40a8 8 0 0 1 8-8Z" fill="#fff" stroke="#1f6feb" stroke-width="1.6" stroke-linejoin="round"/>
+                    <path d="M120 46h40M120 58h26" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M152 54l4 4 8-8" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M188 58h22" stroke="#1f6feb" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M204 52l8 6-8 6" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="252" cy="58" r="24" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.8"/>
+                    <path d="M252 34v-8" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round"/>
+                    <circle cx="252" cy="24" r="2.2" fill="#1f6feb"/>
+                    <circle cx="244" cy="54" r="2.3" fill="#1f6feb"/>
+                    <circle cx="260" cy="54" r="2.3" fill="#1f6feb"/>
+                    <path d="M242 66c6 6 14 6 20 0" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round"/>
+                    <text x="52" y="146" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="600">Engineer</text>
+                    <text x="140" y="146" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="600">Teach</text>
+                    <text x="252" y="146" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="600">Apprentice</text>
+                  </svg>
+                </div>
+                <h3>What it is</h3>
+                <p>
+                  The Apprentice is an AI agent for mold cost estimation, designed around a
+                  different approach to building domain expertise. Rather than relying on a
+                  predefined and comprehensive knowledge base, the agent gradually develops its
+                  professional skills through interaction with engineers who teach, correct, and
+                  refine its calculations.
+                </p>
+              </div>
+              <div class="case-overview__item">
+                <div class="case-overview__illust" aria-hidden="true">
+                  <svg viewBox="0 0 320 168" fill="none">
+                    <rect x="12" y="16" width="92" height="112" rx="10" fill="#fff" stroke="#1f6feb" stroke-width="1.6"/>
+                    <path d="M28 46h40a8 8 0 0 1 8 8v24a8 8 0 0 1-8 8H40l-8 8v-8h-4a8 8 0 0 1-8-8V54a8 8 0 0 1 8-8Z" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.4"/>
+                    <path d="M36 60h28M36 70h18" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round"/>
+                    <text x="58" y="148" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Ask</text>
+                    <rect x="114" y="16" width="92" height="112" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                    <rect x="132" y="38" width="56" height="66" rx="4" fill="#f7f9fc" stroke="#8aa0bd" stroke-width="1.2"/>
+                    <path d="M140 56h20" stroke="#8aa0bd" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M166 52l4 4 8-8" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M140 78h20" stroke="#8aa0bd" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M166 74l10 10M176 74l-10 10" stroke="#5b6f8a" stroke-width="1.6" stroke-linecap="round"/>
+                    <text x="160" y="148" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Review</text>
+                    <rect x="216" y="16" width="92" height="112" rx="10" fill="#eef3fb" stroke="#1f6feb" stroke-width="1.6"/>
+                    <rect x="234" y="40" width="56" height="22" rx="4" fill="#fff" stroke="#1f6feb" stroke-width="1.3"/>
+                    <path d="M242 51h28" stroke="#1f6feb" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M256 62v8" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M252 68l4 4 4-4" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="234" y="80" width="56" height="22" rx="4" fill="#fff" stroke="#1f6feb" stroke-width="1.3"/>
+                    <path d="M242 91h28" stroke="#1f6feb" stroke-width="1.4" stroke-linecap="round"/>
+                    <text x="262" y="148" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Remember</text>
+                  </svg>
+                </div>
+                <h3>How it learns</h3>
+                <p>
+                  An engineer can ask the agent how a particular cost should be calculated. The
+                  Apprentice produces an initial result for the engineer to review, after which the
+                  engineer can identify what is correct or incorrect and provide additional
+                  guidance. The agent retains this feedback as part of its memory, allowing it to
+                  incorporate previous corrections into future calculations. In this sense, the
+                  agent is designed to learn its expertise progressively through practice.
+                </p>
+              </div>
+              <div class="case-overview__item">
+                <div class="case-overview__illust" aria-hidden="true">
+                  <svg viewBox="0 0 680 150" fill="none">
+                    <circle cx="78" cy="52" r="26" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.6"/>
+                    <path d="M78 26v-7" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round"/>
+                    <circle cx="78" cy="16" r="2.2" fill="#1f6feb"/>
+                    <circle cx="70" cy="48" r="2.2" fill="#1f6feb"/>
+                    <circle cx="86" cy="48" r="2.2" fill="#1f6feb"/>
+                    <path d="M68 62c6 6 14 6 20 0" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round"/>
+                    <text x="78" y="122" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Character</text>
+                    <path d="M128 52h28" stroke="#8aa0bd" stroke-width="2"/>
+                    <path d="M150 46l8 6-8 6" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="214" cy="52" r="20" fill="#fff" stroke="#5b6f8a" stroke-width="1.5"/>
+                    <circle cx="208" cy="48" r="1.8" fill="#5b6f8a"/>
+                    <circle cx="220" cy="48" r="1.8" fill="#5b6f8a"/>
+                    <path d="M208 62c4-5 8-5 12 0" stroke="#5b6f8a" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="272" cy="52" r="20" fill="#fff" stroke="#1f6feb" stroke-width="1.5"/>
+                    <circle cx="266" cy="48" r="1.8" fill="#1f6feb"/>
+                    <circle cx="278" cy="48" r="1.8" fill="#1f6feb"/>
+                    <path d="M266 60h12" stroke="#1f6feb" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="330" cy="52" r="20" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.5"/>
+                    <circle cx="324" cy="48" r="1.8" fill="#1f6feb"/>
+                    <circle cx="336" cy="48" r="1.8" fill="#1f6feb"/>
+                    <path d="M322 58c5 6 11 6 16 0" stroke="#1f6feb" stroke-width="1.5" stroke-linecap="round"/>
+                    <text x="272" y="122" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Illustrations</text>
+                    <path d="M374 52h28" stroke="#8aa0bd" stroke-width="2"/>
+                    <path d="M396 46l8 6-8 6" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="430" y="18" width="210" height="72" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                    <circle cx="468" cy="54" r="16" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.4"/>
+                    <circle cx="463" cy="52" r="1.6" fill="#1f6feb"/>
+                    <circle cx="473" cy="52" r="1.6" fill="#1f6feb"/>
+                    <path d="M462 60h12" stroke="#1f6feb" stroke-width="1.4" stroke-linecap="round"/>
+                    <rect x="500" y="36" width="118" height="16" rx="8" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.2"/>
+                    <rect x="500" y="58" width="78" height="16" rx="8" fill="#f7f9fc" stroke="#8aa0bd" stroke-width="1.2"/>
+                    <text x="535" y="122" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Visual language</text>
+                  </svg>
+                </div>
+                <h3>What I did</h3>
+                <p>
+                  As the UX/UI designer, I focused on giving this learning process a recognizable
+                  visual subject. I designed the character, illustrations, and supporting visual
+                  language around the idea of an AI apprentice: a young and imperfect learner that
+                  is capable of making mistakes, receiving instruction, and gradually improving. The
+                  design aims to make the agent's learning state and role understandable while
+                  encouraging engineers to engage with it as something they can teach rather than
+                  simply a tool that is expected to always be correct.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section case-section--tint" id="problem">
+          <div class="container">
+            <div class="case-section__header reveal">
+              <p class="section-label"><span class="eyebrow-dot"></span>02</p>
+              <h2 class="section-title">Problem Space</h2>
+            </div>
+            <div class="case-problem-grid">
+              <article class="case-problem-card reveal">
+                <h3>
+                  <span class="case-problem-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="3"/><path d="M4.5 19c.9-3.1 3-4.6 5.5-4.6s4.6 1.5 5.5 4.6"/><path d="M17.2 4.8l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7Z"/></svg>
+                  </span>
+                  Designing for an AI that is still learning
+                </h3>
+                <p>
+                  Unlike conventional domain-specific tools with predefined rules and knowledge, the
+                  Apprentice develops its cost-estimation skills through interaction with engineers.
+                  Its knowledge is therefore incomplete and continuously evolving, making the
+                  agent's role fundamentally different from that of an expert system that is
+                  expected to provide correct answers from the start.
+                </p>
+              </article>
+              <article class="case-problem-card reveal">
+                <h3>
+                  <span class="case-problem-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 3.5v16"/><path d="M7 20.5h10"/><path d="M12 6.5 5.5 9.2 7.2 14a3.2 3.2 0 0 0 6.2 0L12 6.5Z"/><path d="M12 6.5 18.5 9.2 16.8 14a3.2 3.2 0 0 1-6.2 0L12 6.5Z"/></svg>
+                  </span>
+                  Making mistakes part of the interaction
+                </h3>
+                <p>
+                  Because the agent learns through feedback, engineers need to review its
+                  calculations, identify mistakes, and provide corrections. The interaction
+                  therefore needs to accommodate imperfection without making every incorrect result
+                  feel like a system failure.
+                </p>
+              </article>
+              <article class="case-problem-card reveal">
+                <h3>
+                  <span class="case-problem-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M5 15.5V5.5h10"/></svg>
+                  </span>
+                  Encouraging users to teach the agent
+                </h3>
+                <p>
+                  For the learning process to work, engineers need to be willing to invest effort in
+                  correcting and teaching the agent. The challenge is not only to make the AI
+                  understandable, but also to establish an appropriate relationship between the
+                  engineer and the agent—one in which the AI is perceived as a learner that can
+                  improve through guidance.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="response">
+          <div class="container">
+            <div class="case-section__header reveal">
+              <p class="section-label"><span class="eyebrow-dot"></span>03</p>
+              <h2 class="section-title">Design Response</h2>
+            </div>
+
+            <article class="case-subsection reveal" id="response-character">
+              <div class="case-subsection__head">
+                <span class="case-problem-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="3"/><path d="M4.5 19c.9-3.1 3-4.6 5.5-4.6s4.6 1.5 5.5 4.6"/><path d="M17.2 4.8l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7Z"/></svg>
+                </span>
+                <div>
+                  <h3>Design the AI as a learner, not an expert</h3>
+                </div>
+              </div>
+              <div class="case-subsection__body">
+                <div class="case-response-point">
+                  <span class="case-response-point__mark" aria-hidden="true">1</span>
+                  <div class="case-response-point__content">
+                    <p>
+                      I developed the Apprentice as a recognizable apprentice character rather than
+                      presenting it as an authoritative expert. Its youthful appearance reflects its
+                      evolving expertise and sets an expectation that the agent may still need to
+                      learn from its users.
+                    </p>
+                    <div class="case-character-origin">
+                  <div class="case-character-origin__sources" aria-label="Where the character comes from">
+                    <div class="case-character-origin__source">
+                      <span class="case-character-origin__icon" aria-hidden="true">
+                        <svg class="case-character-origin__glyph" viewBox="0 0 24 24" fill="none"><path d="M17 12.5C17.2761 12.5 17.5 12.2761 17.5 12C17.5 11.7239 17.2761 11.5 17 11.5C16.7239 11.5 16.5 11.7239 16.5 12C16.5 12.2761 16.7239 12.5 17 12.5Z" fill="#0F172A" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 12.5C12.2761 12.5 12.5 12.2761 12.5 12C12.5 11.7239 12.2761 11.5 12 11.5C11.7239 11.5 11.5 11.7239 11.5 12C11.5 12.2761 11.7239 12.5 12 12.5Z" fill="#0F172A" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 12.5C7.27614 12.5 7.5 12.2761 7.5 12C7.5 11.7239 7.27614 11.5 7 11.5C6.72386 11.5 6.5 11.7239 6.5 12C6.5 12.2761 6.72386 12.5 7 12.5Z" fill="#0F172A" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.8214 2.48697 15.5291 3.33782 17L2.5 21.5L7 20.6622C8.47087 21.513 10.1786 22 12 22Z" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                      <span>Dialogue</span>
+                    </div>
+                    <span class="case-character-origin__plus" aria-hidden="true">+</span>
+                    <div class="case-character-origin__source">
+                      <span class="case-character-origin__icon" aria-hidden="true">
+                        <svg class="case-character-origin__glyph" viewBox="0 0 24 24" fill="none"><path d="M12 0C12.3301 0 12.6512 0.108669 12.9131 0.30957C13.175 0.510515 13.3637 0.792514 13.4492 1.11133C13.5347 1.43028 13.5121 1.76915 13.3857 2.07422C13.2594 2.37917 13.0359 2.63376 12.75 2.79883V4.5H15.75C17.5402 4.5 19.2576 5.21167 20.5234 6.47754C21.789 7.74336 22.5 9.46002 22.5 11.25V12C22.8978 12 23.2792 12.1582 23.5605 12.4395C23.8418 12.7207 24 13.1022 24 13.5V16.5C24 16.8978 23.8418 17.2792 23.5605 17.5605C23.2792 17.8419 22.8978 18 22.5 18V19.5C22.5 20.2956 22.1837 21.0585 21.6211 21.6211C21.0585 22.1837 20.2956 22.5 19.5 22.5H4.5C3.70435 22.5 2.94152 22.1837 2.37891 21.6211C1.81631 21.0585 1.5 20.2956 1.5 19.5V18C1.10218 18 0.720758 17.8419 0.439453 17.5605C0.158161 17.2792 0 16.8978 0 16.5V13.5C1.01022e-05 13.1022 0.158158 12.7207 0.439453 12.4395C0.720756 12.1582 1.10218 12 1.5 12V11.25C1.50001 9.46002 2.21099 7.74336 3.47656 6.47754C4.74243 5.21167 6.45979 4.5 8.25 4.5H11.25V2.79883C10.9641 2.63376 10.7406 2.37917 10.6143 2.07422C10.4879 1.76915 10.4653 1.43028 10.5508 1.11133C10.6363 0.792514 10.825 0.510515 11.0869 0.30957C11.3488 0.108668 11.6699 0 12 0ZM8.25 6C6.85762 6 5.52265 6.55353 4.53809 7.53809C3.55353 8.52264 3.00001 9.85763 3 11.25V19.5C3 19.8978 3.15816 20.2792 3.43945 20.5605C3.72076 20.8419 4.10218 21 4.5 21H19.5C19.8978 21 20.2792 20.8419 20.5605 20.5605C20.8418 20.2792 21 19.8978 21 19.5V11.25C21 9.85763 20.4465 8.52264 19.4619 7.53809C18.4773 6.55353 17.1424 6 15.75 6H8.25ZM14.25 18C14.4489 18 14.6396 18.0791 14.7803 18.2197C14.9209 18.3604 15 18.5511 15 18.75C15 18.9489 14.9209 19.1396 14.7803 19.2803C14.6396 19.4208 14.4488 19.5 14.25 19.5H9.75C9.5512 19.4999 9.36031 19.4209 9.21973 19.2803C9.07917 19.1397 9.00002 18.9488 9 18.75C9 18.5512 9.0792 18.3604 9.21973 18.2197C9.36031 18.0791 9.5512 18.0001 9.75 18H14.25ZM15.7051 8.8291C17.6475 8.64761 19.4999 10.1398 19.5 12.0928V13.8281C19.507 14.1601 19.3958 14.4841 19.1855 14.7412C18.9752 14.9983 18.6795 15.1716 18.3525 15.2305C17.085 15.451 14.8424 15.75 12 15.75C9.15765 15.75 6.91491 15.4495 5.64746 15.2305C5.3207 15.1715 5.02569 14.9982 4.81543 14.7412C4.6051 14.4841 4.49296 14.1602 4.5 13.8281V12.0928C4.50009 10.14 6.35261 8.64783 8.29492 8.8291C10.7595 9.05895 13.2405 9.05893 15.7051 8.8291ZM9 10C7.89543 10 7 10.8954 7 12C7 13.1046 7.89543 14 9 14C10.1046 14 11 13.1046 11 12C11 10.8954 10.1046 10 9 10ZM15 10C13.8954 10 13 10.8954 13 12C13 13.1046 13.8954 14 15 14C16.1046 14 17 13.1046 17 12C17 10.8954 16.1046 10 15 10Z" fill="#0F172A"/></svg>
+                      </span>
+                      <span>Robot</span>
+                    </div>
+                  </div>
+                  <span class="case-character-origin__arrow" aria-hidden="true">
+                    <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                  </span>
+                  <div class="case-visual-card">
+                    <div class="case-visual-card__media case-visual-card__media--2 case-visual-card__media--robot">
+                      <div class="case-robot" aria-hidden="true">
+                        <svg class="welcome-robot-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 36" fill="none" width="88" height="80">
+                                <g>
+                                    <g class="welcome-robot-arm-wave-l">
+                                        <ellipse cx="6.30435" cy="21.2997" rx="3.56883" ry="6.95247" transform="rotate(6.74973 6.30435 21.2997)" fill="url(#card-welcome-robot-arm-l)"/>
+                                    </g>
+                                    <g class="welcome-robot-arm-wave-r">
+                                        <ellipse cx="3.56883" cy="6.95247" rx="3.56883" ry="6.95247" transform="matrix(-0.986774 0.162103 0.162103 0.986774 36.7556 13.8606)" fill="url(#card-welcome-robot-arm-r)"/>
+                                    </g>
+                                    <path d="M33.8652 13.9902C34.6477 13.8871 35.3143 14.0349 35.7441 14.5595C36.1634 15.0714 36.312 15.8907 36.1992 17.0195C35.2277 26.7349 27.7245 32.6906 16.4922 35.8134C16.2185 35.8895 16.0013 35.7278 15.9004 35.54C15.8014 35.3554 15.783 35.0976 15.9238 34.8896C16.1433 34.5654 16.2998 34.1344 16.2998 33.4999C16.2998 32.8346 15.8266 32.113 15.1963 31.4843C14.5733 30.863 13.8426 30.3771 13.417 30.1816L13.1631 30.0654L13.3545 29.8622C17.0259 25.9879 22.8842 20.5023 27.7188 17.0966C28.9278 16.2449 30.0764 15.521 31.1133 14.9843C32.1474 14.449 33.0841 14.0931 33.8652 13.9902Z" fill="url(#card-welcome-robot-body)" stroke="url(#card-welcome-robot-body-stroke)" stroke-width="0.4"/>
+                                    <circle cx="20" cy="16" r="16" fill="url(#card-welcome-robot-head)"/>
+                                    <g filter="url(#card-welcome-robot-face-shadow)">
+                                        <ellipse cx="19.5556" cy="13" rx="11.5556" ry="8" fill="url(#card-welcome-robot-face)"/>
+                                        <path d="M19.5557 5.44434C22.6676 5.44436 25.4657 6.31889 27.4736 7.70898C29.4832 9.10028 30.667 10.978 30.667 13C30.667 15.022 29.4832 16.8997 27.4736 18.291C25.4657 19.6811 22.6676 20.5556 19.5557 20.5557C16.4436 20.5557 13.6456 19.6811 11.6377 18.291C9.62807 16.8997 8.44434 15.022 8.44434 13C8.44434 10.978 9.62807 9.10029 11.6377 7.70898C13.6456 6.31888 16.4436 5.44434 19.5557 5.44434Z" stroke="url(#card-welcome-robot-face-ring)" stroke-width="0.888889"/>
+                                    </g>
+                                    <g class="welcome-robot-eye">
+                                        <rect x="13.78" y="9.89" width="4.44" height="6.22" rx="2.22" fill="#1D4ED8" opacity="0.4"/>
+                                        <rect x="14.2222" y="10.3333" width="3.55556" height="5.33333" rx="1.77778" fill="#6EE5FF"/>
+                                        <rect x="14.3111" y="10.4222" width="3.37778" height="5.15556" rx="1.68889" stroke="url(#card-welcome-robot-eye-shine-l)" stroke-width="0.177778"/>
+                                    </g>
+                                    <g class="welcome-robot-eye">
+                                        <rect x="20.89" y="9.89" width="4.44" height="6.22" rx="2.22" fill="#1D4ED8" opacity="0.4"/>
+                                        <rect x="21.3333" y="10.3333" width="3.55556" height="5.33333" rx="1.77778" fill="#6EE5FF"/>
+                                        <rect x="21.4221" y="10.4222" width="3.37778" height="5.15556" rx="1.68889" stroke="url(#card-welcome-robot-eye-shine-r)" stroke-width="0.177778"/>
+                                    </g>
+                                </g>
+                                <defs>
+                                    <filter id="card-welcome-robot-face-shadow" x="7.8" y="5" width="23.9111" height="17.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dx="0.2" dy="1"/>
+                                        <feGaussianBlur stdDeviation="0.2"/>
+                                        <feComposite in2="hardAlpha" operator="out"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+                                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                                    </filter>
+                                    <radialGradient id="card-welcome-robot-arm-l" cx="0" cy="0" r="1" gradientTransform="matrix(3.12273 8.03879 -4.12646 6.08341 4.85451 18.258)" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="1" stop-color="#C3CBFF"/>
+                                    </radialGradient>
+                                    <radialGradient id="card-welcome-robot-arm-r" cx="0" cy="0" r="1" gradientTransform="matrix(5.05639 5.53921 -1.43673 6.22927 0.126945 3.97013)" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="1" stop-color="#C3CBFF"/>
+                                    </radialGradient>
+                                    <linearGradient id="card-welcome-robot-body" x1="19" y1="32" x2="19.5" y2="34.5" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CFD6FF"/>
+                                        <stop offset="1" stop-color="#B5BEFB"/>
+                                    </linearGradient>
+                                    <linearGradient id="card-welcome-robot-body-stroke" x1="18" y1="34.5" x2="16.5" y2="33.5" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CFD6FF" stop-opacity="0"/>
+                                        <stop offset="1" stop-color="#E2E6FF"/>
+                                    </linearGradient>
+                                    <radialGradient id="card-welcome-robot-head" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(13.5 9) rotate(52.8831) scale(23.2002)">
+                                        <stop stop-color="white"/>
+                                        <stop offset="0.841346" stop-color="#C3CBFF"/>
+                                        <stop offset="1" stop-color="#CCD3FF"/>
+                                    </radialGradient>
+                                    <linearGradient id="card-welcome-robot-face" x1="19.5556" y1="5" x2="19.5556" y2="21" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#484FAB"/>
+                                        <stop offset="1" stop-color="#37375E"/>
+                                    </linearGradient>
+                                    <linearGradient id="card-welcome-robot-face-ring" x1="19.5556" y1="5" x2="19.5556" y2="21" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#7BEEE5"/>
+                                        <stop offset="0.403846" stop-color="#7C71FB"/>
+                                        <stop offset="1" stop-color="#B083EC"/>
+                                    </linearGradient>
+                                    <linearGradient id="card-welcome-robot-eye-shine-l" x1="15.9999" y1="10.3333" x2="15.9999" y2="15.6667" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="0.884615" stop-color="white" stop-opacity="0"/>
+                                    </linearGradient>
+                                    <linearGradient id="card-welcome-robot-eye-shine-r" x1="23.111" y1="10.3333" x2="23.111" y2="15.6667" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white"/>
+                                        <stop offset="0.884615" stop-color="white" stop-opacity="0"/>
+                                    </linearGradient>
+                                    <clipPath id="card-welcome-robot-clip">
+                                        <rect width="40" height="36" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                      </div>
+                    </div>
+                    <p>Estimation canvas — drivers &amp; confidence</p>
+                  </div>
+                </div>
+
+                  </div>
+                </div>
+                <div class="case-response-point">
+                  <span class="case-response-point__mark" aria-hidden="true">2</span>
+                  <div class="case-response-point__content">
+                    <h4>Learning through conversation</h4>
+                    <p>
+                      The character is also grounded in dialogue. I combined conversational
+                      interaction with a robot form so the Apprentice can learn through back-and-forth
+                      with engineers—asking questions, receiving corrections, and turning that
+                      exchange into lasting expertise.
+                    </p>
+                    <div class="case-flow-scroller apprentice-flow-scroller">
+                      <p class="apprentice-flow__legend">
+                        <span>
+                          <span class="flow-actor flow-actor--human" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.5c1.1-3.4 3.5-5 6.5-5s5.4 1.6 6.5 5"/></svg>
+                          </span>
+                          Human
+                        </span>
+                        <span>
+                          <span class="flow-actor flow-actor--agent" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="9" rx="2.5"/><path d="M12 4.5v2.2"/><circle cx="12" cy="3.6" r="1.1"/><circle cx="10" cy="12" r="1"/><circle cx="14" cy="12" r="1"/><path d="M10 15.2h4"/></svg>
+                          </span>
+                          Agent
+                        </span>
+                      </p>
+                      <div class="onto-flow apprentice-flow" aria-label="Apprentice learning workflow">
+                        <div class="onto-flow__skill">
+                          <div class="onto-flow__plate">
+                            <p class="onto-flow__kicker">Prepare</p>
+                            <ol>
+                              <li class="case-flow__step onto-flow__step">
+                                <span class="case-flow__label">
+                                  <span class="flow-actor flow-actor--human" title="Human" aria-label="Human">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.5c1.1-3.4 3.5-5 6.5-5s5.4 1.6 6.5 5"/></svg>
+                                  </span>
+                                  Upload materials
+                                </span>
+                                <span class="onto-flow__detail">
+                                  <span class="flow-actor flow-actor--agent" title="Agent" aria-label="Agent">
+                                    <svg viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="9" rx="2.5"/><path d="M12 4.5v2.2"/><circle cx="12" cy="3.6" r="1.1"/><circle cx="10" cy="12" r="1"/><circle cx="14" cy="12" r="1"/><path d="M10 15.2h4"/></svg>
+                                  </span>
+                                  Store in Knowledge Bank
+                                </span>
+                              </li>
+                              <li class="case-flow__step">
+                                <span class="case-flow__label">
+                                  <span class="flow-actor flow-actor--human" title="Human" aria-label="Human">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.5c1.1-3.4 3.5-5 6.5-5s5.4 1.6 6.5 5"/></svg>
+                                  </span>
+                                  Edit Skill
+                                </span>
+                              </li>
+                            </ol>
+                          </div>
+                          <span class="onto-flow__drop" aria-hidden="true">
+                            <svg viewBox="0 0 10 28"><line x1="5" y1="0" x2="5" y2="18"/><path d="M0 18 5 28 10 18Z"/></svg>
+                          </span>
+                        </div>
+                        <ol class="onto-flow__track">
+                          <li class="case-flow__step onto-flow__upload">
+                            <span class="case-flow__label">
+                              <span class="flow-actor flow-actor--human" title="Human" aria-label="Human">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.5c1.1-3.4 3.5-5 6.5-5s5.4 1.6 6.5 5"/></svg>
+                              </span>
+                              Ask a cost question
+                            </span>
+                          </li>
+                          <li class="case-flow__arrow onto-flow__to-analyze" aria-hidden="true">
+                            <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                          </li>
+                          <li class="onto-flow__analyze">
+                            <p class="onto-flow__kicker">Dialogue</p>
+                            <ol class="onto-flow__analyze-row">
+                              <li class="case-flow__step onto-flow__step">
+                                <span class="case-flow__label">
+                                  <span class="flow-actor flow-actor--agent" title="Agent" aria-label="Agent">
+                                    <svg viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="9" rx="2.5"/><path d="M12 4.5v2.2"/><circle cx="12" cy="3.6" r="1.1"/><circle cx="10" cy="12" r="1"/><circle cx="14" cy="12" r="1"/><path d="M10 15.2h4"/></svg>
+                                  </span>
+                                  Answer with KB + Skill
+                                </span>
+                              </li>
+                              <li class="case-flow__arrow apprentice-flow__v-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 14 32"><line x1="7" y1="0" x2="7" y2="20"/><path d="M0 20 7 32 14 20Z"/></svg>
+                              </li>
+                              <li class="case-flow__step onto-flow__step">
+                                <span class="case-flow__label">
+                                  <span class="flow-actor flow-actor--human" title="Human" aria-label="Human">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.5c1.1-3.4 3.5-5 6.5-5s5.4 1.6 6.5 5"/></svg>
+                                  </span>
+                                  Review &amp; edit
+                                </span>
+                                <span class="onto-flow__detail">User revises the reply</span>
+                              </li>
+                              <li class="case-flow__arrow apprentice-flow__v-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 14 32"><line x1="7" y1="0" x2="7" y2="20"/><path d="M0 20 7 32 14 20Z"/></svg>
+                              </li>
+                              <li class="case-flow__step onto-flow__step">
+                                <span class="case-flow__label">
+                                  <span class="flow-actor flow-actor--human" title="Human" aria-label="Human">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.5c1.1-3.4 3.5-5 6.5-5s5.4 1.6 6.5 5"/></svg>
+                                  </span>
+                                  Submit
+                                </span>
+                              </li>
+                            </ol>
+                          </li>
+                          <li class="case-flow__arrow onto-flow__to-graph" aria-hidden="true">
+                            <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                          </li>
+                          <li class="onto-flow__graph">
+                            <p class="onto-flow__kicker">Learn</p>
+                            <div class="case-flow__step onto-flow__step">
+                              <span class="case-flow__label">
+                                <span class="flow-actor flow-actor--agent" title="Agent" aria-label="Agent">
+                                  <svg viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="9" rx="2.5"/><path d="M12 4.5v2.2"/><circle cx="12" cy="3.6" r="1.1"/><circle cx="10" cy="12" r="1"/><circle cx="14" cy="12" r="1"/><path d="M10 15.2h4"/></svg>
+                                </span>
+                                Save to Knowledge Bank &amp; update Skill
+                              </span>
+                              <span class="onto-flow__detail">
+                                <span class="flow-actor flow-actor--human" title="Human" aria-label="Human">
+                                  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 19.5c1.1-3.4 3.5-5 6.5-5s5.4 1.6 6.5 5"/></svg>
+                                </span>
+                                Download report · History
+                              </span>
+                            </div>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-subsection reveal" id="response-illustration">
+              <div class="case-subsection__head">
+                <span class="case-problem-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3.5v16"/><path d="M7 20.5h10"/><path d="M12 6.5 5.5 9.2 7.2 14a3.2 3.2 0 0 0 6.2 0L12 6.5Z"/><path d="M12 6.5 18.5 9.2 16.8 14a3.2 3.2 0 0 1-6.2 0L12 6.5Z"/></svg>
+                </span>
+                <div>
+                  <h3>Use illustration to express an evolving personality</h3>
+                </div>
+              </div>
+              <div class="case-subsection__body">
+                <p>
+                  I created a series of illustrations to represent the character in different
+                  situations and states. Rather than using illustration only as decoration, I used
+                  changes in expression, pose, and context to reinforce the idea of an AI that can
+                  make mistakes, receive guidance, and gradually improve.
+                </p>
+                <div class="case-visual-row case-visual-row--hero">
+                  <div class="case-visual-card case-visual-card--hero">
+                    <div class="case-visual-card__media case-visual-card__media--1 case-visual-card__media--illust">
+                      <object
+                        type="image/svg+xml"
+                        data="./assets/illustration-check-in.svg?v=float1"
+                        aria-label="Agent workspace illustration"
+                        tabindex="-1"
+                      ></object>
+                    </div>
+                    <p>Agent workspace — intake &amp; guidance</p>
+                  </div>
+                  <div class="case-visual-row__stack">
+                  <div class="case-visual-card">
+                    <div class="case-visual-card__media case-visual-card__media--3 case-visual-card__media--loading">
+                      <div class="case-loading" aria-hidden="true">
+                        <div class="case-loading__avatar message-avatar">
+                          <svg class="message-avatar-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" width="32" height="32">
+                            <g clip-path="url(#case-load-robot-clip)">
+                              <circle cx="16" cy="16" r="16" fill="url(#case-load-robot-bg)"/>
+                              <g filter="url(#case-load-robot-face-shadow)">
+                                <ellipse cx="16" cy="16" rx="13" ry="9" fill="url(#case-load-robot-face)"/>
+                                <path d="M16 7.5C19.501 7.5 22.6493 8.483 24.9082 10.0469C27.169 11.6121 28.5 13.7252 28.5 16C28.5 18.2748 27.169 20.3879 24.9082 21.9531C22.6493 23.517 19.501 24.5 16 24.5C12.499 24.5 9.35072 23.517 7.0918 21.9531C4.83101 20.3879 3.5 18.2748 3.5 16C3.5 13.7252 4.83101 11.6121 7.0918 10.0469C9.35072 8.483 12.499 7.5 16 7.5Z" stroke="url(#case-load-robot-face-ring)"/>
+                              </g>
+                              <g class="message-avatar-eye" filter="url(#case-load-robot-eye-l)">
+                                <rect x="10" y="13" width="4" height="6" rx="2" fill="#6EE5FF"/>
+                                <rect x="10.1" y="13.1" width="3.8" height="5.8" rx="1.9" stroke="url(#case-load-robot-eye-shine-l)" stroke-width="0.2"/>
+                              </g>
+                              <g class="message-avatar-eye" filter="url(#case-load-robot-eye-r)">
+                                <rect x="18" y="13" width="4" height="6" rx="2" fill="#6EE5FF"/>
+                                <rect x="18.1" y="13.1" width="3.8" height="5.8" rx="1.9" stroke="url(#case-load-robot-eye-shine-r)" stroke-width="0.2"/>
+                              </g>
+                            </g>
+                            <defs>
+                              <filter id="case-load-robot-face-shadow" x="3" y="7" width="30" height="24" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="2" dy="4"/>
+                                <feGaussianBlur stdDeviation="1"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.3 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                              </filter>
+                              <filter id="case-load-robot-eye-l" x="8" y="11" width="8" height="10" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="1"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.113725 0 0 0 0 0.305882 0 0 0 0 0.847059 0 0 0 1 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                              </filter>
+                              <filter id="case-load-robot-eye-r" x="16" y="11" width="8" height="10" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="1"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.113725 0 0 0 0 0.305882 0 0 0 0 0.847059 0 0 0 1 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                              </filter>
+                              <radialGradient id="case-load-robot-bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.5 9) rotate(52.8831) scale(23.2002)">
+                                <stop stop-color="white"/>
+                                <stop offset="1" stop-color="#C3CBFF"/>
+                              </radialGradient>
+                              <linearGradient id="case-load-robot-face" x1="16" y1="7" x2="16" y2="25" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#484FAB"/>
+                                <stop offset="1" stop-color="#37375E"/>
+                              </linearGradient>
+                              <linearGradient id="case-load-robot-face-ring" x1="16" y1="7" x2="16" y2="25" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7BEEE5"/>
+                                <stop offset="0.403846" stop-color="#7C71FB"/>
+                                <stop offset="1" stop-color="#B083EC"/>
+                              </linearGradient>
+                              <linearGradient id="case-load-robot-eye-shine-l" x1="12" y1="13" x2="12" y2="19" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.884615" stop-color="white" stop-opacity="0"/>
+                              </linearGradient>
+                              <linearGradient id="case-load-robot-eye-shine-r" x1="20" y1="13" x2="20" y2="19" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.884615" stop-color="white" stop-opacity="0"/>
+                              </linearGradient>
+                              <clipPath id="case-load-robot-clip">
+                                <rect width="32" height="32" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </div>
+                        <div class="case-loading__panel processing-card">
+                          <div class="processing-title">Thinking...</div>
+                          <div class="processing-steps">
+                            <div class="processing-step" style="--step-index: 0">
+                              <span class="processing-dot"></span>
+                              <span>Understanding the question...</span>
+                            </div>
+                            <div class="processing-step" style="--step-index: 1">
+                              <span class="processing-dot"></span>
+                              <span>Searching the knowledge base...</span>
+                            </div>
+                            <div class="processing-step" style="--step-index: 2">
+                              <span class="processing-dot"></span>
+                              <span>Organizing evidence...</span>
+                            </div>
+                            <div class="processing-step" style="--step-index: 3">
+                              <span class="processing-dot"></span>
+                              <span>Generating the answer...</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Loading state — thinking &amp; progress</p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <div class="case-visual-row case-visual-row--pair reveal">
+              <div class="case-visual-card">
+                <div class="case-visual-card__media case-visual-card__media--illust case-visual-card__media--failed">
+                  <object
+                    type="image/svg+xml"
+                    data="./assets/apprentice/failed.svg"
+                    aria-label="Connection failed illustration"
+                    tabindex="-1"
+                  ></object>
+                </div>
+                <p>Connection lost or service unavailable</p>
+              </div>
+              <div class="case-visual-card">
+                <div class="case-visual-card__media case-visual-card__media--illust">
+                  <object
+                    type="image/svg+xml"
+                    data="./assets/apprentice/massage.svg"
+                    aria-label="New message illustration"
+                    tabindex="-1"
+                  ></object>
+                </div>
+                <p>New message notification</p>
+              </div>
+              <div class="case-visual-card">
+                <div class="case-visual-card__media case-visual-card__media--illust">
+                  <object
+                    type="image/svg+xml"
+                    data="./assets/apprentice/empty.svg"
+                    aria-label="Empty search result illustration"
+                    tabindex="-1"
+                  ></object>
+                </div>
+                <p>Empty search — no related information found</p>
+              </div>
+            </div>
+
+            <article class="case-subsection reveal" id="response-system">
+              <div class="case-subsection__head">
+                <span class="case-problem-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"/><path d="M5 15.5V5.5h10"/></svg>
+                </span>
+                <div>
+                  <h3>Make the character the subject of the interaction</h3>
+                </div>
+              </div>
+              <div class="case-subsection__body">
+                <p>
+                  I designed the character as a visible subject throughout the product, giving the AI
+                  a consistent presence beyond a generic avatar or chatbot icon. This makes the
+                  agent's actions and learning process easier to associate with a recognizable
+                  entity.
+                </p>
+              </div>
+            </article>
+
+            <article class="case-subsection reveal" id="response-lightweight">
+              <div class="case-subsection__head">
+                <span class="case-problem-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M19.5 4.5c-5.2.8-8.8 4.2-10.6 8.6L5 18.5l5.2-2.2c4.2-1.6 7.6-5 8.6-10.2.2-.8-.6-1.5-1.3-1.6Z"/><path d="M9.2 15.2c1.6-1.5 3.8-3 6.2-3.8"/></svg>
+                </span>
+                <div>
+                  <h3>Create a visual basis for teaching and trust</h3>
+                </div>
+              </div>
+              <div class="case-subsection__body">
+                <p>
+                  The visual identity was designed to make the agent feel approachable and imperfect
+                  rather than overly authoritative. By presenting the Apprentice as a learner, the
+                  design aims to create a more appropriate expectation of the interaction: engineers
+                  are not simply asking an expert for an answer, but helping an AI gradually acquire
+                  domain expertise.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-section case-section--tint" id="reflection">
+          <div class="container">
+            <div class="case-section__header reveal">
+              <p class="section-label"><span class="eyebrow-dot"></span>04</p>
+              <h2 class="section-title">Reflection</h2>
+            </div>
+            <div class="case-reflection reveal">
+              <p>
+                The project made me consider how an AI's visual identity can shape people's
+                expectations of its capabilities and their willingness to engage with it. By
+                presenting the Apprentice as a learner rather than an expert, the design creates
+                space for human teaching and correction. A remaining question is how this
+                relationship should evolve as the agent becomes more capable: when should it
+                continue to appear as a learner, and when should it begin to act with greater
+                confidence and autonomy?
+              </p>
+              <a class="btn btn--ghost" href="./projects.html">← Back to Projects</a>
+            </div>
+          </div>
+        </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <span>© 2026 Xi(Jessie) Ji</span>
+        </div>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+    <script>
+      (function () {
+        document.querySelectorAll("[data-demo-open]").forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.open(link.href, "_blank", "noopener,noreferrer");
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

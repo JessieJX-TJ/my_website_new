@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./auth-gate.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading · Xi(Jessie) Ji</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-nav">
+        <div class="site-nav__inner">
+          <a class="site-nav__brand" href="./index.html">
+            <span class="brand-stud" aria-hidden="true"></span>
+            Xi(Jessie) Ji
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="site-nav__links" aria-label="Primary">
+            <a class="is-active" href="./index.html">About Me</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./resume.html">Resume</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <article class="hobby-detail">
+          <div class="container hobby-detail__grid">
+            <div class="hobby-detail__visual reveal">
+              <div class="hobby-detail__frame hobby-detail__frame--green">
+                <img
+                  src="./assets/hobby-reading.jpg"
+                  alt="Reading"
+                  onerror="this.style.display='none'; this.nextElementSibling.hidden=false;"
+                />
+                <div class="hobby-detail__placeholder" hidden>
+                  Add your photo<br />
+                  <span>assets/hobby-reading.jpg</span>
+                </div>
+              </div>
+            </div>
+            <div class="hobby-detail__copy reveal">
+              <p class="section-label"><span class="eyebrow-dot"></span>Hobby</p>
+              <h1 class="section-title">Reading</h1>
+              <p class="section-lead">
+                I am a huge fan of Terry Pratchett — sharp humor, humane worlds, and ideas that
+                sneak up on you while you’re laughing.
+              </p>
+              <div class="hobby-detail__body">
+                <p>
+                  Discworld (and beyond) keeps reminding me that systems, people, and stories are
+                  tangled together — and that wit can be a serious way of seeing clearly.
+                </p>
+                <p>
+                  Reading feeds how I frame problems in design: with curiosity, empathy, and a
+                  preference for meaning over jargon.
+                </p>
+              </div>
+              <a class="btn btn--ghost" href="./index.html#hobbies">← Back to Hobbies</a>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <span>© 2026 Xi(Jessie) Ji</span>
+</div>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

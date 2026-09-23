@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./auth-gate.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Regulation Navigator · Xi(Jessie) Ji</title>
+    <meta
+      name="description"
+      content="Case study: AI Regulation Navigator — helping product and legal teams turn AI regulations into actionable checks, evidence, and decisions."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-nav">
+        <div class="site-nav__inner">
+          <a class="site-nav__brand" href="./index.html">
+            <span class="brand-stud" aria-hidden="true"></span>
+            Xi(Jessie) Ji
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="site-nav__links" aria-label="Primary">
+            <a href="./index.html">About Me</a>
+            <a class="is-active" href="./projects.html">Projects</a>
+            <a href="./resume.html">Resume</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="case-page">
+        <nav class="case-side-nav" aria-label="Case study sections">
+          <p class="case-side-nav__label">Contents</p>
+          <ol class="case-side-nav__list">
+            <li><a href="#overview" data-section="overview"><span>01</span>Overview</a></li>
+            <li><a href="#problem" data-section="problem"><span>02</span>Problem Space</a></li>
+            <li>
+              <a href="#response" data-section="response"><span>03</span>Design Response</a>
+              <ul class="case-side-nav__sub">
+                <li><a href="#response-workflow">Dialogue</a></li>
+                <li><a href="#response-guidance">Guidance</a></li>
+                <li><a href="#response-errors">Errors</a></li>
+                <li><a href="#response-capabilities">Capabilities</a></li>
+              </ul>
+            </li>
+            <li><a href="#reflection" data-section="reflection"><span>04</span>Reflection</a></li>
+          </ol>
+        </nav>
+
+        <div class="case-content">
+          <header class="case-hero">
+            <div class="container case-hero__inner reveal">
+              <div class="case-hero__copy">
+                <p class="section-label"><span class="eyebrow-dot"></span>Case Study</p>
+                <h1 class="section-title">AI Regulation Navigator</h1>
+                <p class="section-lead">
+                  An AI agent designed to support regulatory and compliance work through
+                  dialogue-based interaction. Rather than navigating a traditional document-based
+                  workflow, users can work with the agent through an ongoing dialogue that guides
+                  tasks, provides relevant information, and responds to errors or misunderstandings
+                  along the way.
+                </p>
+                <div class="case-hero__meta">
+                  <div>
+                    <span class="case-meta__label">Role</span>
+                    <span class="case-meta__value">UX &amp; UI Design</span>
+                  </div>
+                  <div>
+                    <span class="case-meta__label">Timeline</span>
+                    <span class="case-meta__value">2026 · 3 months</span>
+                  </div>
+                  <div>
+                    <span class="case-meta__label">Team</span>
+                    <span class="case-meta__value">Product · Legal · Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container case-hero__demo reveal">
+              <div class="case-embed">
+                <div class="case-embed__frame case-embed__frame--reg-home">
+                  <div class="reg-home-preview" aria-hidden="true">
+                    <header class="reg-home-preview__top">
+                      <strong>AI Regulation Agent <em>2.0</em></strong>
+                      <span>Knowledge base</span>
+                      <b>XJ</b>
+                    </header>
+                    <div class="reg-home-preview__welcome">
+                      <h2>Welcome, Jessie</h2>
+                      <p>Choose a work mode to start today’s regulation work.</p>
+                      <i></i>
+                    </div>
+                    <div class="reg-home-preview__grid">
+                      <article class="reg-home-preview__card reg-home-preview__card--report">
+                        <header>
+                          <span class="reg-home-preview__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h7M14 2v6h6M14 2l6 6v5"/><circle cx="17" cy="17" r="3"/><path d="m19.5 19.5 2 2"/></svg>
+                          </span>
+                          <h3>Regulation reports &amp; news <em>1.0</em></h3>
+                        </header>
+                        <img src="./assets/ai-reg/regulation-center.svg" alt="" />
+                        <p>Collect the latest regulation news and parse external materials.</p>
+                        <ul>
+                          <li>Report generation</li>
+                          <li>News parsing</li>
+                          <li>Skill setup</li>
+                        </ul>
+                        <span class="reg-home-preview__cta">Open report tool</span>
+                      </article>
+                      <article class="reg-home-preview__card reg-home-preview__card--compare">
+                        <header>
+                          <span class="reg-home-preview__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M6 3h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M8 8h8M8 12h8M8 16h8"/></svg>
+                          </span>
+                          <h3>Clause breakdown &amp; compare <em>1.0</em></h3>
+                        </header>
+                        <img src="./assets/ai-reg/regulation-compare.svg" alt="" />
+                        <p>Break down clauses and analyze differences between versions.</p>
+                        <ul>
+                          <li>Clause breakdown</li>
+                          <li>Old vs new compare</li>
+                          <li>Excel export</li>
+                        </ul>
+                        <span class="reg-home-preview__cta">Open regulation tools</span>
+                      </article>
+                      <article class="reg-home-preview__card reg-home-preview__card--check">
+                        <header>
+                          <span class="reg-home-preview__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+                          </span>
+                          <h3>Compliance check <em>2.0</em></h3>
+                        </header>
+                        <img src="./assets/ai-reg/compliance-check.svg" alt="" />
+                        <p>Match target-market rules and generate compliance findings.</p>
+                        <ul>
+                          <li>Excel parsing</li>
+                          <li>Market matching</li>
+                          <li>Risk export</li>
+                        </ul>
+                        <span class="reg-home-preview__cta">Start check</span>
+                      </article>
+                      <article class="reg-home-preview__card reg-home-preview__card--qa">
+                        <header>
+                          <span class="reg-home-preview__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/><path d="M8 9h8M8 13h5"/></svg>
+                          </span>
+                          <h3>Regulation Q&amp;A <em>2.0</em></h3>
+                        </header>
+                        <img src="./assets/ai-reg/legal-qa.svg" alt="" />
+                        <p>Locate clauses in the source text and judge related risk.</p>
+                        <ul>
+                          <li>Smart Q&amp;A</li>
+                          <li>Clause citation</li>
+                          <li>Risk judgment</li>
+                        </ul>
+                        <span class="reg-home-preview__cta">Start Q&amp;A</span>
+                      </article>
+                    </div>
+                  </div>
+                  <div class="case-embed__overlay">
+                    <a class="btn btn--primary" href="https://jessiejx-tj.github.io/legal_demo/" target="_blank" rel="noopener noreferrer">Open demo</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <section class="case-section" id="overview">
+            <div class="container">
+              <div class="case-section__header reveal">
+                <p class="section-label"><span class="eyebrow-dot"></span>01</p>
+                <h2 class="section-title">Overview</h2>
+              </div>
+              <div class="case-overview case-overview--lead reveal">
+                <div class="case-overview__item">
+                  <div class="case-overview__illust" aria-hidden="true">
+                    <svg viewBox="0 0 320 168" fill="none">
+                      <rect x="16" y="18" width="100" height="108" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <path d="M32 42h68M32 58h52M32 74h60M32 90h40" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round"/>
+                      <text x="66" y="146" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="600">Regulations</text>
+                      <path d="M128 68h28" stroke="#1f6feb" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M150 62l8 6-8 6" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M176 36h108a12 12 0 0 1 12 12v36a12 12 0 0 1-12 12H196l-16 14V96h-4a12 12 0 0 1-12-12V48a12 12 0 0 1 12-12Z" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M196 58h72M196 74h52" stroke="#1f6feb" stroke-width="2" stroke-linecap="round"/>
+                      <text x="230" y="146" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Dialogue</text>
+                    </svg>
+                  </div>
+                  <h3>What it is</h3>
+                  <p>
+                    Regulatory work often involves navigating large amounts of technical and
+                    procedural information while completing structured tasks. I worked on an AI
+                    agent that rethought this workflow around dialogue, allowing users to interact
+                    with the system while progressing through regulatory-related tasks.
+                  </p>
+                </div>
+                <div class="case-overview__item">
+                  <div class="case-overview__illust" aria-hidden="true">
+                    <svg viewBox="0 0 320 168" fill="none">
+                      <rect x="12" y="16" width="92" height="112" rx="10" fill="#fff" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M34 48h48" stroke="#1f6feb" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M34 64l8 8 16-18" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M34 92h40" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round"/>
+                      <text x="58" y="148" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Guide</text>
+                      <rect x="114" y="16" width="92" height="112" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <path d="M136 46h48a8 8 0 0 1 8 8v22a8 8 0 0 1-8 8h-28l-10 8v-8h-10a8 8 0 0 1-8-8V54a8 8 0 0 1 8-8Z" fill="#e8f0fe" stroke="#5b6f8a" stroke-width="1.4"/>
+                      <path d="M148 64h28M148 74h18" stroke="#5b6f8a" stroke-width="1.6" stroke-linecap="round"/>
+                      <text x="160" y="148" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Inform</text>
+                      <rect x="216" y="16" width="92" height="112" rx="10" fill="#eef3fb" stroke="#1f6feb" stroke-width="1.6"/>
+                      <circle cx="262" cy="62" r="18" fill="#fff" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M262 52v14M262 72v2" stroke="#1f6feb" stroke-width="2" stroke-linecap="round"/>
+                      <text x="262" y="148" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Correct</text>
+                    </svg>
+                  </div>
+                  <h3>What I did</h3>
+                  <p>
+                    As the UX/UI designer, I designed the interaction flows and interface
+                    presentation of the agent. Rather than reproducing conventional enterprise
+                    interfaces based on forms, tables, and separate functions, I explored how
+                    dialogue could become part of the primary workspace. The agent could guide users
+                    through a task, provide relevant information at the appropriate point, and
+                    remind or correct users when they made mistakes or misunderstood the process.
+                  </p>
+                </div>
+                <div class="case-overview__item">
+                  <div class="case-overview__illust" aria-hidden="true">
+                    <svg viewBox="0 0 680 150" fill="none">
+                      <rect x="16" y="18" width="160" height="78" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <path d="M36 42h120M36 58h92M36 74h108" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round"/>
+                      <text x="96" y="122" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Separate tools</text>
+                      <path d="M188 56h36" stroke="#8aa0bd" stroke-width="2"/>
+                      <path d="M218 50l8 6-8 6" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <rect x="238" y="18" width="180" height="78" rx="10" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M258 42h140a8 8 0 0 1 8 8v16a8 8 0 0 1-8 8H274l-12 10V74h-4a8 8 0 0 1-8-8V50a8 8 0 0 1 8-8Z" fill="#fff" stroke="#1f6feb" stroke-width="1.4"/>
+                      <text x="328" y="122" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Dialogue</text>
+                      <path d="M430 56h36" stroke="#8aa0bd" stroke-width="2"/>
+                      <path d="M460 50l8 6-8 6" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <rect x="480" y="18" width="180" height="78" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <circle cx="522" cy="56" r="14" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M548 50h88M548 66h64" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round"/>
+                      <text x="570" y="122" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Task with the agent</text>
+                    </svg>
+                  </div>
+                  <h3>Core outcomes</h3>
+                  <p>
+                    The project resulted in a dialogue-based interface that integrated AI assistance
+                    directly into the workflow, shifting the interaction from navigating a set of
+                    tools toward working through a task with an active AI agent.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section case-section--tint" id="problem">
+            <div class="container">
+              <div class="case-section__header reveal">
+                <p class="section-label"><span class="eyebrow-dot"></span>02</p>
+                <h2 class="section-title">Problem Space</h2>
+              </div>
+              <div class="case-problem-grid">
+                <article class="case-problem-card reveal">
+                  <h3>From tool navigation to task-oriented interaction</h3>
+                  <p>
+                    Traditional enterprise interfaces often organize complex workflows around menus,
+                    forms, tables, and separate functions. Users need to understand the structure of
+                    the system before they can complete a task. The challenge was to make AI
+                    assistance part of the task itself rather than another function users had to
+                    navigate to.
+                  </p>
+                </article>
+                <article class="case-problem-card reveal">
+                  <h3>Making AI assistance actionable</h3>
+                  <p>
+                    Providing information is not enough when users are working through a procedural
+                    task. The system needs to surface relevant information at the right moment and
+                    help users understand what to do next, without interrupting the workflow.
+                  </p>
+                </article>
+                <article class="case-problem-card reveal">
+                  <h3>Supporting users when they go off course</h3>
+                  <p>
+                    Users may make mistakes, misunderstand requirements, or provide incomplete
+                    information during a task. The interface therefore needs to support AI
+                    interventions that can remind, guide, or correct users while keeping the
+                    interaction understandable and controllable.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section" id="response">
+            <div class="container">
+              <div class="case-section__header reveal">
+                <p class="section-label"><span class="eyebrow-dot"></span>03</p>
+                <h2 class="section-title">Design Response</h2>
+              </div>
+
+              <article class="case-subsection reveal" id="response-workflow">
+                <div class="case-subsection__head">
+                  <span class="case-subsection__index">3.1</span>
+                  <div>
+                    <h3>Make dialogue part of the workflow</h3>
+                  </div>
+                </div>
+                <div class="case-subsection__body">
+                  <p>
+                    I reorganized the workflow around ongoing dialogue rather than treating it as an
+                    additional feature. Users can communicate their needs, receive guidance, and
+                    progressively complete tasks within the same interaction space, while structured
+                    interface elements remain available where needed.
+                  </p>
+                  <div class="case-flow-scroller">
+                    <ol class="case-flow" aria-label="Report workflow">
+                      <li class="case-flow__step">
+                        <span class="case-flow__label">Select data scope</span>
+                      </li>
+                      <li class="case-flow__arrow" aria-hidden="true">
+                        <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                      </li>
+                      <li class="case-flow__step">
+                        <span class="case-flow__label">Fill in report details</span>
+                      </li>
+                      <li class="case-flow__arrow" aria-hidden="true">
+                        <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                      </li>
+                      <li class="case-flow__branch" aria-label="Generate or preview">
+                        <span class="case-flow__join case-flow__join--in" aria-hidden="true"></span>
+                        <ol>
+                          <li class="case-flow__step">
+                            <span class="case-flow__label">Generate report</span>
+                          </li>
+                          <li class="case-flow__step case-flow__step--optional">
+                            <span class="case-flow__label">Preview / edit report</span>
+                            <span class="case-flow__note">Optional</span>
+                          </li>
+                        </ol>
+                        <span class="case-flow__join case-flow__join--out" aria-hidden="true"></span>
+                      </li>
+                      <li class="case-flow__arrow" aria-hidden="true">
+                        <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                      </li>
+                      <li class="case-flow__step">
+                        <span class="case-flow__label">Confirm report</span>
+                      </li>
+                      <li class="case-flow__arrow" aria-hidden="true">
+                        <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                      </li>
+                      <li class="case-flow__step">
+                        <span class="case-flow__label">Download report / save to history</span>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-subsection reveal" id="response-guidance">
+                <div class="case-subsection__head">
+                  <span class="case-subsection__index">3.2</span>
+                  <div>
+                    <h3>Provide guidance at the point of action</h3>
+                  </div>
+                </div>
+                <div class="case-subsection__body">
+                  <p>
+                    Instead of requiring users to actively search for help, the agent can surface
+                    relevant information and guidance as the task progresses. Dialogue becomes a way
+                    for the system to respond to the user's current situation and support the next
+                    step.
+                  </p>
+                </div>
+              </article>
+
+              <article class="case-subsection reveal" id="response-errors">
+                <div class="case-subsection__head">
+                  <span class="case-subsection__index">3.3</span>
+                  <div>
+                    <h3>Use dialogue to handle errors and misunderstandings</h3>
+                  </div>
+                </div>
+                <div class="case-subsection__body">
+                  <p>
+                    When users provide incorrect or incomplete information, the agent can respond
+                    through dialogue rather than simply returning an error state. It can explain the
+                    issue, remind users of relevant requirements, and guide them toward an
+                    appropriate next step.
+                  </p>
+                  <div class="case-panel-stage" aria-label="User Interface viewport">
+                    <div class="reg-chat">
+                      <div class="reg-chat__stream">
+                        <article class="reg-chat__assistant">
+                          <div class="reg-chat__meta">
+                            <strong>Regulation agent</strong>
+                            <span>Data scope</span>
+                          </div>
+                          <div class="reg-chat__bubble">
+                            <strong>Select a data scope</strong>
+                            <p>Choose the sources to include in this report, then continue to the next step.</p>
+                          </div>
+                        </article>
+                        <article class="reg-chat__user">
+                          <div class="reg-chat__bubble reg-chat__bubble--user">
+                            <strong>3 sources selected</strong>
+                            <small>EU AI Act · Local policy · Product notes</small>
+                          </div>
+                        </article>
+                        <article class="reg-chat__assistant">
+                          <div class="reg-chat__meta">
+                            <strong>Regulation agent</strong>
+                            <span>Report details</span>
+                          </div>
+                          <div class="reg-chat__bubble">
+                            <strong>Fill in report details</strong>
+                            <p>Add a title, audience, and review window before the draft is generated.</p>
+                          </div>
+                        </article>
+                        <article class="reg-chat__user">
+                          <div class="reg-chat__bubble reg-chat__bubble--user">
+                            <strong>Q2 compliance review</strong>
+                            <small>Audience: Product &amp; Legal</small>
+                          </div>
+                        </article>
+                        <article class="reg-chat__assistant">
+                          <div class="reg-chat__meta">
+                            <strong>Regulation agent</strong>
+                            <span>Ready</span>
+                          </div>
+                          <div class="reg-chat__bubble">
+                            <strong>Ready to generate</strong>
+                            <p>Confirm the scope and details, then generate the report draft.</p>
+                          </div>
+                        </article>
+                      </div>
+                      <div class="reg-chat__composer">
+                        <div class="reg-chat__composer-card">
+                          <div class="reg-chat__composer-copy">
+                            <strong>Generate report</strong>
+                            <span>Creates a draft from the selected scope and details.</span>
+                          </div>
+                          <button type="button">Generate</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-subsection reveal" id="response-capabilities">
+                <div class="case-subsection__head">
+                  <span class="case-subsection__index">3.4</span>
+                  <div>
+                    <h3>Make AI capabilities visible through interaction</h3>
+                  </div>
+                </div>
+                <div class="case-subsection__body">
+                  <p>
+                    I translated underlying AI capabilities into recognizable interaction patterns,
+                    including guidance, reminders, corrections, and contextual responses. This made
+                    the agent's role in the workflow visible through interaction rather than leaving
+                    its capabilities as an invisible backend function.
+                  </p>
+                  <div class="case-think" aria-hidden="true">
+                    <div class="case-loading">
+                      <div class="case-loading__panel processing-card">
+                        <div class="processing-title">Thinking...</div>
+                        <div class="processing-steps">
+                          <div class="processing-step" style="--step-index: 0">
+                            <span class="processing-dot"></span>
+                            <span>Offering guidance...</span>
+                          </div>
+                          <div class="processing-step" style="--step-index: 1">
+                            <span class="processing-dot"></span>
+                            <span>Sending a reminder...</span>
+                          </div>
+                          <div class="processing-step" style="--step-index: 2">
+                            <span class="processing-dot"></span>
+                            <span>Preparing a correction...</span>
+                          </div>
+                          <div class="processing-step" style="--step-index: 3">
+                            <span class="processing-dot"></span>
+                            <span>Responding in context...</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-section case-section--tint" id="reflection">
+            <div class="container">
+              <div class="case-section__header reveal">
+                <p class="section-label"><span class="eyebrow-dot"></span>04</p>
+                <h2 class="section-title">Reflection</h2>
+              </div>
+              <div class="case-reflection reveal">
+                <p>
+                  The project showed me how conversational interaction can turn AI capabilities into
+                  active support within an existing enterprise workflow. At the same time, making an
+                  agent more proactive also raises questions about how much initiative it should
+                  take, when an intervention is helpful, and how users can remain aware of and in
+                  control of the process.
+                </p>
+                <a class="btn btn--ghost" href="./projects.html">← Back to Projects</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <span>© 2026 Xi(Jessie) Ji</span>
+</div>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

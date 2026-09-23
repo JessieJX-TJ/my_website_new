@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./auth-gate.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV · Xi(Jessie) Ji</title>
+    <meta name="description" content="Curriculum vitae of Xi (Jessie) Ji." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page cv-page">
+      <main class="cv-viewer">
+        <div class="cv-toolbar">
+          <div class="cv-toolbar__left">
+            <a class="cv-back" href="./index.html" aria-label="Back to About Me">← Back</a>
+            <div>
+              <p class="section-label"><span class="eyebrow-dot"></span>Curriculum Vitae</p>
+            </div>
+          </div>
+          <div class="cv-toolbar__actions">
+            <div class="cv-zoom" role="group" aria-label="Zoom controls">
+              <button class="cv-zoom__btn" type="button" data-zoom="out" aria-label="Zoom out">−</button>
+              <span class="cv-zoom__label" aria-live="polite">100%</span>
+              <button class="cv-zoom__btn" type="button" data-zoom="in" aria-label="Zoom in">+</button>
+              <button class="cv-zoom__btn cv-zoom__btn--text" type="button" data-zoom="reset">
+                Reset
+              </button>
+            </div>
+            <a
+              class="btn btn--primary cv-download"
+              href="./Xi-Jessie-Ji-CV.pdf"
+              download="Xi-Jessie-Ji-CV.pdf"
+              aria-label="Download PDF"
+            >
+              <svg
+                class="cv-download__icon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L11 13.59V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"
+                />
+              </svg>
+              <span>PDF</span>
+            </a>
+          </div>
+        </div>
+        <div class="cv-stage">
+          <iframe
+            class="cv-frame"
+            src="./Xi-Jessie-Ji-CV.pdf#toolbar=0&navpanes=0&zoom=100"
+            title="CV of Xi (Jessie) Ji"
+          ></iframe>
+        </div>
+      </main>
+    </div>
+    <script src="./cv.js"></script>
+  </body>
+</html>

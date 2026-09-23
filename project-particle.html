@@ -1,0 +1,747 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./auth-gate.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automotive Manufacturing Ontology · Xi(Jessie) Ji</title>
+    <meta
+      name="description"
+      content="Case study: Automotive Manufacturing Ontology — a shared model of concepts, process relations, and terminology for design and production teams."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-nav">
+        <div class="site-nav__inner">
+          <a class="site-nav__brand" href="./index.html">
+            <span class="brand-stud" aria-hidden="true"></span>
+            Xi(Jessie) Ji
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="site-nav__links" aria-label="Primary">
+            <a href="./index.html">About Me</a>
+            <a class="is-active" href="./projects.html">Projects</a>
+            <a href="./resume.html">Resume</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="case-page">
+        <nav class="case-side-nav" aria-label="Case study sections">
+          <p class="case-side-nav__label">Contents</p>
+          <ol class="case-side-nav__list">
+            <li><a href="#overview" data-section="overview"><span>01</span>Overview</a></li>
+            <li><a href="#problem" data-section="problem"><span>02</span>Problem Space</a></li>
+            <li>
+              <a href="#response" data-section="response"><span>03</span>Design Response</a>
+              <ul class="case-side-nav__sub">
+                <li><a href="#response-workflow">Workflow</a></li>
+                <li><a href="#response-skills">Skills</a></li>
+                <li><a href="#response-graph">Graph</a></li>
+                <li><a href="#response-list">List</a></li>
+              </ul>
+            </li>
+            <li><a href="#reflection" data-section="reflection"><span>04</span>Reflection</a></li>
+          </ol>
+        </nav>
+
+        <div class="case-content">
+          <header class="case-hero">
+            <div class="container case-hero__inner reveal">
+              <div class="case-hero__copy">
+                <p class="section-label"><span class="eyebrow-dot"></span>Case Study</p>
+                <h1 class="section-title">Automotive Manufacturing Ontology</h1>
+                <p class="section-lead">
+                  An AI-powered tool for transforming unstructured documents into structured
+                  knowledge. Users can configure how AI extracts concepts and relationships, review
+                  the generated ontology, and explore the resulting knowledge through an interactive
+                  graph.
+                </p>
+                <div class="case-hero__meta">
+                  <div>
+                    <span class="case-meta__label">Role</span>
+                    <span class="case-meta__value">UX &amp; UI Design</span>
+                  </div>
+                  <div>
+                    <span class="case-meta__label">Timeline</span>
+                    <span class="case-meta__value">2026 · 3 months</span>
+                  </div>
+                  <div>
+                    <span class="case-meta__label">Team</span>
+                    <span class="case-meta__value">Product · Engineering · Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container case-hero__demo reveal">
+              <div class="case-embed">
+                <div class="case-embed__frame case-embed__frame--onto-workbench">
+                  <div class="onto-workbench-preview" aria-hidden="true">
+                    <aside class="onto-workbench-preview__rail">
+                      <div class="onto-workbench-preview__brand">
+                        <span class="onto-workbench-preview__mark" aria-hidden="true">
+                          <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="18" cy="5" r="3" />
+                            <circle cx="6" cy="12" r="3" />
+                            <circle cx="18" cy="19" r="3" />
+                            <path d="M8.59 13.51 15.42 17.49" />
+                            <path d="M15.41 6.51 8.59 10.49" />
+                          </svg>
+                        </span>
+                        <span class="onto-workbench-preview__brand-name"
+                          >Ontology Workbench<small>Automotive Manufacturing</small></span
+                        >
+                      </div>
+                      <nav class="onto-workbench-preview__nav">
+                        <span class="is-active">
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="16" y="16" width="6" height="6" rx="1" />
+                            <rect x="2" y="16" width="6" height="6" rx="1" />
+                            <rect x="9" y="2" width="6" height="6" rx="1" />
+                            <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+                            <path d="M12 12V8" />
+                          </svg>
+                          Graph
+                        </span>
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                              d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
+                            />
+                          </svg>
+                          Skill
+                        </span>
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                              d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"
+                            />
+                            <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
+                            <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+                          </svg>
+                          Ontology
+                        </span>
+                      </nav>
+                      <div class="onto-workbench-preview__rail-bottom">
+                        <span>
+                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                          </svg>
+                          Groups &amp; accounts
+                        </span>
+                      </div>
+                    </aside>
+                    <div class="onto-workbench-preview__main">
+                      <header class="onto-workbench-preview__top">
+                        <div>
+                          <strong>Relationship Graph</strong>
+                          <p>351 nodes · 291 relations · 60 types · 60 use cases</p>
+                        </div>
+                        <div class="onto-workbench-preview__legend">
+                          <span><i class="onto-workbench-preview__dot onto-workbench-preview__dot--type"></i>Test type</span>
+                          <span><i class="onto-workbench-preview__dot onto-workbench-preview__dot--case"></i>Test case</span>
+                          <span><i class="onto-workbench-preview__dot onto-workbench-preview__dot--detail"></i>Condition / action / expectation</span>
+                        </div>
+                        <span class="onto-workbench-preview__list">
+                          <svg viewBox="0 0 18 16" aria-hidden="true">
+                            <path d="M1 2.5h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                            <path d="M9 8h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                            <path d="M9 13.5h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                            <path d="M1.2 6.2 6.4 8.9 1.2 11.6Z" fill="currentColor" />
+                          </svg>
+                          List
+                        </span>
+                      </header>
+                      <div class="onto-workbench-preview__board">
+                        <img src="./assets/ontology/graph-board.png" alt="" />
+                        <div class="onto-workbench-preview__controls" aria-hidden="true">
+                          <span>
+                            <svg viewBox="0 0 16 16"><path d="M2.5 8a5.5 5.5 0 0 1 9.4-3.9M13.5 8a5.5 5.5 0 0 1-9.4 3.9"/><path d="M11.2 2.2v3h-3M4.8 13.8v-3h3"/></svg>
+                          </span>
+                          <span>
+                            <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3v10"/></svg>
+                          </span>
+                          <span>
+                            <svg viewBox="0 0 16 16"><path d="M3 8h10"/></svg>
+                          </span>
+                          <span>
+                            <svg viewBox="0 0 16 16"><path d="M6 3H3v3M10 3h3v3M6 13H3v-3M10 13h3v-3"/></svg>
+                          </span>
+                          <span>
+                            <svg viewBox="0 0 16 16"><path d="M5 3.2v9.6M11 3.2v9.6"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="case-embed__overlay">
+                    <a
+                      class="btn btn--primary"
+                      href="https://jessiejx-tj.github.io/testcase_new_demo/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Open demo</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <section class="case-section" id="overview">
+            <div class="container">
+              <div class="case-section__header reveal">
+                <p class="section-label"><span class="eyebrow-dot"></span>01</p>
+                <h2 class="section-title">Overview</h2>
+              </div>
+              <div class="case-overview case-overview--lead reveal">
+                <div class="case-overview__item">
+                  <div class="case-overview__illust" aria-hidden="true">
+                    <svg viewBox="0 0 320 168" fill="none">
+                      <rect x="16" y="18" width="92" height="108" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <path d="M32 40h60M32 54h48M32 68h54M32 82h36M32 96h44" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round"/>
+                      <text x="62" y="146" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="600">Documents</text>
+                      <path d="M122 68h28" stroke="#1f6feb" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M144 62l8 6-8 6" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <text x="148" y="54" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12" font-weight="700">AI</text>
+                      <path d="M196 48L258 78M196 48L210 108M258 78L210 108" stroke="#8aa0bd" stroke-width="1.8"/>
+                      <circle cx="196" cy="48" r="16" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.8"/>
+                      <circle cx="258" cy="78" r="16" fill="#fff" stroke="#5b6f8a" stroke-width="1.8"/>
+                      <circle cx="210" cy="108" r="16" fill="#fff" stroke="#5b6f8a" stroke-width="1.8"/>
+                      <text x="196" y="52" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="9" font-weight="700">Part</text>
+                      <text x="258" y="82" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="9" font-weight="700">Step</text>
+                      <text x="210" y="112" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="8" font-weight="700">Link</text>
+                      <text x="228" y="146" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="600">Concepts &amp; relations</text>
+                    </svg>
+                  </div>
+                  <h3>What it is</h3>
+                  <p>
+                    This project explores how AI can support the construction and organization of
+                    structured knowledge from unstructured documents. Using automotive research
+                    documents as an example, the system allows users to upload source materials,
+                    configure extraction skills, and generate an ontology containing concepts and
+                    relationships identified from the text.
+                  </p>
+                </div>
+                <div class="case-overview__item">
+                  <div class="case-overview__illust" aria-hidden="true">
+                    <svg viewBox="0 0 320 168" fill="none">
+                      <rect x="12" y="16" width="92" height="112" rx="10" fill="#fff" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M26 36h64M26 50h48M26 64h40" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round"/>
+                      <circle cx="34" cy="86" r="7" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M31 86l2 2 4-4" stroke="#1f6feb" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                      <text x="48" y="90" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="11">Review</text>
+                      <text x="58" y="148" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Ontology</text>
+                      <rect x="114" y="16" width="92" height="112" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <rect x="128" y="34" width="64" height="16" rx="8" fill="#e8f0fe" stroke="#1f6feb"/>
+                      <text x="160" y="46" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="10" font-weight="700">Extract</text>
+                      <rect x="128" y="58" width="64" height="16" rx="8" fill="#fff" stroke="#8aa0bd"/>
+                      <text x="160" y="70" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="10">Reuse</text>
+                      <rect x="128" y="82" width="64" height="16" rx="8" fill="#fff" stroke="#8aa0bd"/>
+                      <text x="160" y="94" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="10">Edit</text>
+                      <text x="160" y="148" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Skill</text>
+                      <rect x="216" y="16" width="92" height="112" rx="10" fill="#eef3fb" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M246 52L278 74M246 52L250 96M278 74L250 96" stroke="#8aa0bd" stroke-width="1.6"/>
+                      <circle cx="246" cy="52" r="10" fill="#fff" stroke="#1f6feb" stroke-width="1.6"/>
+                      <circle cx="278" cy="74" r="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <circle cx="250" cy="96" r="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <text x="262" y="148" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13" font-weight="700">Graph</text>
+                    </svg>
+                  </div>
+                  <h3>What I did</h3>
+                  <p>
+                    I designed the interaction across three connected parts: <strong>Ontology</strong>,
+                    <strong>Skill</strong>, and <strong>Graph</strong>.
+                  </p>
+                  <ul>
+                    <li>
+                      The Ontology section supports document processing, AI-generated knowledge
+                      structuring, and human review.
+                    </li>
+                    <li>
+                      Skills define how the AI interprets and extracts information, allowing users to
+                      create, edit, upload, and reuse different extraction configurations.
+                    </li>
+                    <li>
+                      The Graph section visualizes the resulting ontology as nodes and relationships,
+                      while allowing users to inspect and adjust existing knowledge structures.
+                    </li>
+                  </ul>
+                </div>
+                <div class="case-overview__item">
+                  <div class="case-overview__illust" aria-hidden="true">
+                    <svg viewBox="0 0 680 150" fill="none">
+                      <rect x="16" y="18" width="120" height="78" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <path d="M32 40h88M32 54h68M32 68h76" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round"/>
+                      <text x="76" y="122" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Documents</text>
+                      <path d="M148 56h36" stroke="#8aa0bd" stroke-width="2"/>
+                      <path d="M178 50l8 6-8 6" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <rect x="198" y="18" width="120" height="78" rx="10" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.6"/>
+                      <text x="258" y="52" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="16" font-weight="700">AI</text>
+                      <text x="258" y="72" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="12">structure</text>
+                      <text x="258" y="122" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Generated</text>
+                      <path d="M330 56h36" stroke="#8aa0bd" stroke-width="2"/>
+                      <path d="M360 50l8 6-8 6" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <rect x="380" y="18" width="120" height="78" rx="10" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <circle cx="414" cy="52" r="10" fill="#e8f0fe" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M410 52l3 3 6-6" stroke="#1f6feb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      <text x="432" y="56" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="13">Edit</text>
+                      <text x="440" y="122" text-anchor="middle" fill="#4a5160" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Review</text>
+                      <path d="M512 56h36" stroke="#8aa0bd" stroke-width="2"/>
+                      <path d="M542 50l8 6-8 6" stroke="#8aa0bd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <rect x="562" y="18" width="102" height="78" rx="10" fill="#eef3fb" stroke="#1f6feb" stroke-width="1.6"/>
+                      <path d="M592 46L628 64M592 46L600 76M628 64L600 76" stroke="#8aa0bd" stroke-width="1.6"/>
+                      <circle cx="592" cy="46" r="8" fill="#fff" stroke="#1f6feb" stroke-width="1.6"/>
+                      <circle cx="628" cy="64" r="8" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <circle cx="600" cy="76" r="8" fill="#fff" stroke="#5b6f8a" stroke-width="1.6"/>
+                      <text x="613" y="122" text-anchor="middle" fill="#1f6feb" font-family="Source Sans 3, Segoe UI, sans-serif" font-size="14" font-weight="600">Graph</text>
+                    </svg>
+                  </div>
+                  <h3>Core outcomes</h3>
+                  <p>
+                    The final interface establishes a workflow from unstructured documents to
+                    AI-generated knowledge, human refinement, and visual exploration, making the
+                    underlying structure of the extracted information accessible through the
+                    interface.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section case-section--tint" id="problem">
+            <div class="container">
+              <div class="case-section__header reveal">
+                <p class="section-label"><span class="eyebrow-dot"></span>02</p>
+                <h2 class="section-title">Problem Space</h2>
+              </div>
+              <div class="case-problem-grid case-problem-grid--pair">
+                <article class="case-problem-card reveal">
+                  <h3>
+                    <span class="case-problem-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-3.5-3.5"/><path d="M11 8.5v5M8.5 11h5"/></svg>
+                    </span>
+                    Making AI-generated knowledge understandable
+                  </h3>
+                  <p>
+                    Structured concepts are not automatically meaningful. Users need to see where
+                    they come from, spot gaps, and refine the result.
+                  </p>
+                </article>
+                <article class="case-problem-card reveal">
+                  <h3>
+                    <span class="case-problem-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h16"/><circle cx="16" cy="12" r="2.2" fill="#e8eef6"/></svg>
+                    </span>
+                    Configuring how AI interprets information
+                  </h3>
+                  <p>
+                    Extraction cannot stay fixed. Users need to see the active Skill and create,
+                    edit, or reuse it for different documents.
+                  </p>
+                </article>
+                <article class="case-problem-card reveal">
+                  <h3>
+                    <span class="case-problem-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="2.2"/><circle cx="17" cy="7" r="2.2"/><circle cx="12" cy="17" r="2.2"/><path d="M9 9.2 15.2 8M8.4 9.6l2.4 5.6M15.4 8.8 13.2 15"/></svg>
+                    </span>
+                    Working with complex relationships
+                  </h3>
+                  <p>
+                    Dense graphs are hard to follow. Users need to move between the whole structure
+                    and one concept without losing their place.
+                  </p>
+                </article>
+                <article class="case-problem-card reveal">
+                  <h3>
+                    <span class="case-problem-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24"><path d="M8 4h8a2 2 0 0 1 2 2v14l-6-3-6 3V6a2 2 0 0 1 2-2Z"/><path d="m9.5 10 1.8 1.8 3.2-3.3"/></svg>
+                    </span>
+                    Connecting generation with human review
+                  </h3>
+                  <p>
+                    Generated knowledge is a draft. The interface needs a path to review, edit, and
+                    validate it before it becomes the knowledge base.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section" id="response">
+            <div class="container">
+              <div class="case-section__header reveal">
+                <p class="section-label"><span class="eyebrow-dot"></span>03</p>
+                <h2 class="section-title">Design Response</h2>
+              </div>
+
+              <article class="case-subsection reveal" id="response-workflow">
+                <div class="case-subsection__head">
+                  <span class="case-problem-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-3.5-3.5"/><path d="M11 8.5v5M8.5 11h5"/></svg>
+                  </span>
+                  <div>
+                    <h3>Turn AI extraction into an editable workflow</h3>
+                  </div>
+                </div>
+                <div class="case-subsection__body">
+                  <p>
+                    Instead of presenting AI-generated ontology as a final output, I designed the
+                    workflow around generation and refinement. Users can upload source documents,
+                    select or configure a Skill, review the generated structure, and make corrections
+                    before submitting it for further use.
+                  </p>
+                  <div class="case-flow-scroller">
+                    <div class="onto-flow" aria-label="Ontology workflow">
+                      <div class="onto-flow__skill">
+                        <div class="onto-flow__plate">
+                          <p class="onto-flow__kicker">Skill</p>
+                          <ol>
+                            <li class="case-flow__step">
+                              <span class="case-flow__label">New Skill</span>
+                            </li>
+                            <li class="case-flow__step">
+                              <span class="case-flow__label">Edit existing Skill</span>
+                            </li>
+                            <li class="case-flow__step onto-flow__step">
+                              <span class="case-flow__label">Enable or disable Skill</span>
+                              <span class="onto-flow__detail">For the ontology work</span>
+                            </li>
+                          </ol>
+                        </div>
+                        <span class="onto-flow__drop" aria-hidden="true">
+                          <svg viewBox="0 0 10 28"><line x1="5" y1="0" x2="5" y2="18"/><path d="M0 18 5 28 10 18Z"/></svg>
+                        </span>
+                      </div>
+                      <ol class="onto-flow__track">
+                        <li class="case-flow__step onto-flow__upload">
+                          <span class="case-flow__label">Upload files</span>
+                        </li>
+                        <li class="case-flow__arrow onto-flow__to-analyze" aria-hidden="true">
+                          <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                        </li>
+                        <li class="onto-flow__analyze">
+                          <p class="onto-flow__kicker">Ontology</p>
+                          <ol class="onto-flow__analyze-row">
+                            <li class="case-flow__step onto-flow__step">
+                              <span class="case-flow__label">Data construction</span>
+                              <span class="onto-flow__detail">Nodes and relationships</span>
+                            </li>
+                            <li class="case-flow__arrow" aria-hidden="true">
+                              <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                            </li>
+                            <li class="case-flow__step onto-flow__step">
+                              <span class="case-flow__label">Data refinement</span>
+                              <span class="onto-flow__detail">Review and edit AI results</span>
+                            </li>
+                          </ol>
+                        </li>
+                        <li class="case-flow__arrow onto-flow__to-graph" aria-hidden="true">
+                          <svg viewBox="0 0 36 10"><line x1="2" y1="5" x2="25" y2="5"/><path d="M26 0 36 5 26 10Z"/></svg>
+                        </li>
+                        <li class="onto-flow__graph">
+                          <p class="onto-flow__kicker">Graph</p>
+                          <div class="case-flow__step">
+                            <span class="case-flow__label">Ontology results visualized</span>
+                          </div>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-subsection reveal" id="response-skills">
+                <div class="case-subsection__head">
+                  <span class="case-problem-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h16"/><circle cx="16" cy="12" r="2.2" fill="#e8eef6"/></svg>
+                  </span>
+                  <div>
+                    <h3>Make extraction logic configurable through Skills</h3>
+                  </div>
+                </div>
+                <div class="case-subsection__body">
+                  <p>
+                    Skills act as configurable instructions for how the AI extracts and organizes
+                    information. I designed a consistent interaction pattern for creating, editing,
+                    uploading, and reusing Skills, allowing users to adapt the extraction process to
+                    different types of source material.
+                  </p>
+                  <div class="case-skill-card">
+                    <div class="case-skill-card__main">
+                      <div class="case-skill-card__top">
+                        <span class="case-skill-card__name">Grouped body-control test-case Excel extraction</span>
+                        <span class="case-skill-card__status">Enabled</span>
+                      </div>
+                      <p class="case-skill-card__meta">excel · grouped_test_case</p>
+                      <p class="case-skill-card__desc">
+                        For business data on the second sheet, with a complex header in the first row,
+                        grouped by number, name, and title.
+                      </p>
+                    </div>
+                    <div class="case-skill-card__actions">
+                      <button type="button" title="Disable" aria-label="Disable Grouped body-control test-case Excel extraction">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="m19 5 3-3"/>
+                          <path d="m2 22 3-3"/>
+                          <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+                          <path d="M7.5 13.5 10 11"/>
+                          <path d="M10.5 16.5 13 14"/>
+                          <path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/>
+                        </svg>
+                      </button>
+                      <button type="button" title="Delete" aria-label="Delete Grouped body-control test-case Excel extraction">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M3 6h18"/>
+                          <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+                          <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                          <path d="M10 11v6"/>
+                          <path d="M14 11v6"/>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-subsection reveal" id="response-graph">
+                <div class="case-subsection__head">
+                  <span class="case-problem-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="2.2"/><circle cx="17" cy="7" r="2.2"/><circle cx="12" cy="17" r="2.2"/><path d="M9 9.2 15.2 8M8.4 9.6l2.4 5.6M15.4 8.8 13.2 15"/></svg>
+                  </span>
+                  <div>
+                    <h3>Connect structured data with visual exploration</h3>
+                  </div>
+                </div>
+                <div class="case-subsection__body">
+                  <p>
+                    I designed the Graph as a visual representation of the ontology rather than an
+                    independent drawing tool. Nodes and relationships are generated from the
+                    structured ontology, while users can inspect and edit existing elements through
+                    the graph and corresponding information cards.
+                  </p>
+                  <figure class="case-onto-graph">
+                    <div class="case-onto-graph__frame case-onto-graph__frame--interactive">
+                      <p class="case-onto-graph__note">
+                        Click a node or arrowed relation to inspect links
+                      </p>
+                      <!-- Interactive graph mounts here via ontology-graph.js -->
+                      <div class="case-onto-graph__legend-bar">
+                        <span class="case-onto-graph__legend">
+                          <i class="legend-swatch legend-swatch--type"></i>Type
+                        </span>
+                        <span class="case-onto-graph__legend">
+                          <i class="legend-swatch legend-swatch--case"></i>Case
+                        </span>
+                        <span class="case-onto-graph__legend">
+                          <i class="legend-swatch legend-swatch--detail"></i>Condition / Action
+                        </span>
+                      </div>
+                    </div>
+                  </figure>
+                </div>
+              </article>
+
+              <article class="case-subsection reveal" id="response-list">
+                <div class="case-subsection__head">
+                  <span class="case-problem-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M8 4h8a2 2 0 0 1 2 2v14l-6-3-6 3V6a2 2 0 0 1 2-2Z"/><path d="m9.5 10 1.8 1.8 3.2-3.3"/></svg>
+                  </span>
+                  <div>
+                    <h3>Coordinate graph and list views</h3>
+                  </div>
+                </div>
+                <div class="case-subsection__body">
+                  <p>
+                    To help users work with dense knowledge structures, I connected the graph with a
+                    structured list view. Selecting a node or relationship in the list locates it in
+                    the graph and visually isolates the selected element, allowing users to move
+                    between overview and detail without losing context.
+                  </p>
+                  <div class="case-panel-stage">
+                    <div class="panel-proto">
+                      <aside class="panel-proto__rail" aria-label="Prototype navigation">
+                        <div class="panel-proto__brand">
+                          <span class="panel-proto__mark" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51 15.42 17.49"/><path d="M15.41 6.51 8.59 10.49"/></svg>
+                          </span>
+                          <span class="panel-proto__brand-name">Ontology Workbench<small>Automotive</small></span>
+                        </div>
+                        <nav class="panel-proto__nav">
+                          <a href="#graph" data-panel-view="graph">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+                            Graph
+                          </a>
+                          <a href="#skill" data-panel-view="skill">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+                            Skill
+                          </a>
+                          <a href="#ontology" data-panel-view="ontology">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                            Ontology
+                          </a>
+                        </nav>
+                        <div class="panel-proto__rail-bottom">
+                          <a href="#account">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            Groups &amp; accounts
+                          </a>
+                        </div>
+                      </aside>
+                      <div class="panel-proto__main">
+                        <header class="panel-proto__top">
+                          <div>
+                            <strong>Relation graph</strong>
+                            <p>Browse nodes, relations, and domain structure.</p>
+                          </div>
+                          <button type="button" class="panel-proto__list" aria-pressed="false" aria-expanded="false">
+                            <svg viewBox="0 0 18 16" aria-hidden="true">
+                              <path d="M1 2.5h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                              <path d="M9 8h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                              <path d="M9 13.5h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                              <path class="panel-proto__list-tri" d="M1.2 6.2 6.4 8.9 1.2 11.6Z" fill="currentColor"/>
+                            </svg>
+                            List
+                          </button>
+                        </header>
+                        <div class="panel-proto__board" aria-label="Board">
+                          <p class="panel-proto__hint panel-proto__hint--nav">
+                            <svg viewBox="0 0 36 10" aria-hidden="true">
+                              <line x1="34" y1="5" x2="11" y2="5"/>
+                              <path d="M10 0 0 5 10 10Z"/>
+                            </svg>
+                            <span>Try clicking here</span>
+                          </p>
+                          <p class="panel-proto__hint panel-proto__hint--list">
+                            <svg viewBox="0 0 10 36" aria-hidden="true">
+                              <line x1="5" y1="34" x2="5" y2="11"/>
+                              <path d="M0 10 5 0 10 10Z"/>
+                            </svg>
+                            <span>Try clicking here</span>
+                          </p>
+                          <p class="panel-proto__explain" hidden></p>
+                          <aside class="panel-proto__drawer" aria-label="List" aria-hidden="true">
+                            <header class="panel-proto__drawer-head">
+                              <strong>Cases</strong>
+                              <span>4</span>
+                            </header>
+                            <ul>
+                              <li><span>Voice Control</span><small>Case</small></li>
+                              <li><span>Input Method</span><small>Case</small></li>
+                              <li><span>AC Memory</span><small>Case</small></li>
+                              <li><span>Shortcut Keys</span><small>Case</small></li>
+                            </ul>
+                          </aside>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-section case-section--tint" id="reflection">
+            <div class="container">
+              <div class="case-section__header reveal">
+                <p class="section-label"><span class="eyebrow-dot"></span>04</p>
+                <h2 class="section-title">Reflection</h2>
+              </div>
+              <div class="case-reflection reveal">
+                <p>
+                  The project helped me explore how AI-generated knowledge can be made inspectable
+                  and editable through interaction. However, the current design focuses more on
+                  structuring and refining AI outputs than on helping users understand why
+                  particular concepts and relationships were generated. Future iterations could
+                  therefore explore how interfaces can better support users in evaluating the
+                  provenance and reliability of AI-generated knowledge.
+                </p>
+                <a class="btn btn--ghost" href="./projects.html">← Back to Projects</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__inner">
+          <span>© 2026 Xi(Jessie) Ji</span>
+</div>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./ontology-graph.js"></script>
+    <script>
+      (function () {
+        var root = document.querySelector(".panel-proto");
+        if (!root) return;
+        var views = {
+          graph: {
+            title: "Relation graph",
+            lead: "Browse nodes, relations, and domain structure.",
+            explain: "Types sit as hubs, cases hang from them, and conditions or actions attach as detail nodes."
+          },
+          skill: {
+            title: "Skill",
+            lead: "Set what a skill extracts from a file.",
+            explain: "A skill names the file types it accepts and the entities and relations it should pull out."
+          },
+          ontology: {
+            title: "Ontology",
+            lead: "Build a source into the shared model.",
+            explain: "Upload a file or pick a source, set the build parameters, and send the parsed result for review."
+          }
+        };
+        var title = root.querySelector(".panel-proto__top strong");
+        var lead = root.querySelector(".panel-proto__top p");
+        var explain = root.querySelector(".panel-proto__explain");
+        var board = root.querySelector(".panel-proto__board");
+        var listBtn = root.querySelector(".panel-proto__list");
+        var drawer = root.querySelector(".panel-proto__drawer");
+        root.querySelectorAll("[data-panel-view]").forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            var view = views[link.getAttribute("data-panel-view")];
+            if (!view) return;
+            root.querySelectorAll("[data-panel-view]").forEach(function (item) {
+              item.classList.toggle("is-active", item === link);
+            });
+            if (title) title.textContent = view.title;
+            if (lead) lead.textContent = view.lead;
+            if (explain) {
+              explain.hidden = false;
+              explain.textContent = view.explain;
+            }
+          });
+        });
+        root.querySelectorAll(".panel-proto__rail a").forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+          });
+        });
+        if (listBtn && board) {
+          listBtn.addEventListener("click", function () {
+            var open = !board.classList.contains("is-list-open");
+            board.classList.toggle("is-list-open", open);
+            listBtn.setAttribute("aria-pressed", String(open));
+            listBtn.setAttribute("aria-expanded", String(open));
+            if (drawer) drawer.setAttribute("aria-hidden", String(!open));
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

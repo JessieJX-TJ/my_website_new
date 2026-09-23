@@ -1,0 +1,16 @@
+{
+  "name": "xi-jessie-ji-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Personal website of Xi(Jessie) Ji — static multi-page site",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "pdfkit": "^0.20.2",
+    "vite": "^6.3.5"
+  }
+}

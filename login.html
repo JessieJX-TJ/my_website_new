@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter · Xi(Jessie) Ji</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./auth-gate.js"></script>
+  </head>
+  <body class="login-body">
+    <main class="login-page">
+      <form class="login-card" autocomplete="off">
+        <div class="login-card__brand">
+          <span class="brand-stud" aria-hidden="true"></span>
+          <span>Xi(Jessie) Ji</span>
+        </div>
+        <h1>Welcome in</h1>
+        <p>
+          Want to view this site? Contact Jessie at
+          <a href="mailto:jxmailbox0510@163.com">jxmailbox0510@163.com</a>
+          for the password to continue.
+        </p>
+        <label class="login-field" for="password">
+          <span>Password</span>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            inputmode="numeric"
+            autocomplete="current-password"
+            required
+            autofocus
+          />
+        </label>
+        <p class="login-error" role="alert" hidden>Incorrect password. Try again.</p>
+        <button class="btn btn--primary login-submit" type="submit">Enter</button>
+      </form>
+    </main>
+    <script src="./login.js"></script>
+  </body>
+</html>
